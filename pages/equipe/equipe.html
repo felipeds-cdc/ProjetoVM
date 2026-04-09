@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>VORTEX MOTORS - Equipe</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
       rel="stylesheet">
@@ -142,7 +142,24 @@
 
 <body>
 
-    <iframe src="/components/navbs.html" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+        <!-- HEADER -->
+    <header class="header" role="banner">
+      <div class="header__logo">
+        <a href="/index.html" aria-label="Vortex Motors - Página inicial">
+          <img src="/public/images/LOGO.png" alt="Logo Vortex Motors" width="290" height="auto" />
+        </a>
+      </div>
+
+      <nav class="navbar" role="navigation" aria-label="Menu principal">
+        <div class="navbar__links">
+          <a href="/index.html" class="navbar__link" aria-current="page">Home</a>
+          <a href="/pages/about/sobre.html" class="navbar__link">Sobre</a>
+          <a href="/pages/equipe/equipe.html" class="navbar__link">Equipe</a>
+          <a href="/pages/auth/login.html" class="navbar__link">Login</a>
+          <a href="/pages/contact/contato.html" class="navbar__link">Contato</a>
+        </div>
+      </nav>
+    </header>
 
     <div class="equipe-header">
         <h1>Nossa Equipe</h1>

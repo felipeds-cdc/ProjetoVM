@@ -3,31 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Vortex Motors - O futuro em movimento. Conheça os melhores carros e peças automotivas pelo melhor custo-benefício do mercado." />
-    <meta name="keywords" content="carros, peças automotivas, veículos, manutenção, vendas de carros" />
-    <meta name="author" content="Vortex Motors" />
-    <meta name="theme-color" content="#00c8ff" />
+    <meta name="description" content="Serviços oferecidos pela Vortex Motors - Troca de peças, pontos de carregamento e entrega rápida" />
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vortexmotors.com.br/" />
-    <meta property="og:title" content="VORTEX MOTORS - O Futuro em Movimento" />
-    <meta property="og:description" content="Conheça os melhores carros e peças automotivas pelo melhor custo-benefício." />
-    <meta property="og:image" content="/public/images/LOGO.png" />
-
-    <title>VORTEX MOTORS - Home</title>
+    <title>VORTEX MOTORS - Serviços</title>
     
     <link rel="stylesheet" href="/public/css/styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="/public/images/LOGO.png" />
   </head>
 
   <body>
-    <a href="#main-content" class="sr-only">Pular para conteúdo principal</a>
-
     <!-- HEADER -->
     <header class="header" role="banner">
       <div class="header__logo">
@@ -38,7 +25,7 @@
 
       <nav class="navbar" role="navigation" aria-label="Menu principal">
         <div class="navbar__links">
-          <a href="/index.html" class="navbar__link" aria-current="page">Home</a>
+          <a href="/index.html" class="navbar__link">Home</a>
           <a href="/pages/about/sobre.html" class="navbar__link">Sobre</a>
           <a href="/pages/equipe/equipe.html" class="navbar__link">Equipe</a>
           <a href="/pages/auth/login.html" class="navbar__link">Login</a>
@@ -49,15 +36,46 @@
 
     <!-- MAIN CONTENT -->
     <main id="main-content">
-      <!-- BANNER HERO -->
-      <section class="banner" aria-labelledby="banner-title">
-        <div class="banner__content">
-          <h1 id="banner-title">O FUTURO EM MOVIMENTO</h1>
-          <p class="banner__description">
-            Conheça o nosso site, aqui você pode encontrar os carros das melhores marcas e a peça ideal para o seu carro, 
-            pelo melhor custo benefício do mercado.
-          </p>
-          <a href="/pages/services/servicos.html" class="btn">Ver Serviços</a>
+      <section class="cards__container" aria-labelledby="services-title">
+        <h1 id="services-title" class="cards__title">Serviços</h1>
+        
+        <div class="card">
+          <img 
+            src="/public/images/pecas.png" 
+            alt="Ícone de troca de peças" 
+            class="card__image"
+            width="120"
+          />
+          <h2 class="card__title">TROCA DE PEÇAS</h2>
+          <a href="/pages/services/troca_pecas.html">
+            <button type="button" class="card__button">SELECIONAR</button>
+          </a>
+        </div>
+
+        <div class="card">
+          <img 
+            src="/public/images/carregando.png" 
+            alt="Ícone de ponto de carregamento" 
+            class="card__image"
+            width="120"
+          />
+          <h2 class="card__title">PONTOS DE CARREGAMENTO</h2>
+          <a href="/pages/services/carregamento.html">
+            <button type="button" class="card__button">SELECIONAR</button>
+          </a>
+        </div>
+
+        <div class="card">
+          <img 
+            src="/public/images/entrega.png" 
+            alt="Ícone de entrega rápida" 
+            class="card__image"
+            width="120"
+          />
+          <h2 class="card__title">ENTREGA RÁPIDA</h2>
+          <a href="/pages/services/entrega_rapida.html">
+            <button type="button" class="card__button">SELECIONAR</button>
+          </a>
         </div>
       </section>
     </main>

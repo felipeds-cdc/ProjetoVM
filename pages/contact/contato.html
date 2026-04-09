@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Entre em contato com a Vortex Motors" />
+    
+    <title>VORTEX MOTORS - Contato</title>
+    
+    <link rel="stylesheet" href="/public/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header" role="banner">
+      <div class="header__logo">
+        <a href="/index.html" aria-label="Vortex Motors - Página inicial">
+          <img src="/public/images/LOGO.png" alt="Logo Vortex Motors" width="290" height="auto" />
+        </a>
+      </div>
+
+      <nav class="navbar" role="navigation" aria-label="Menu principal">
+        <div class="navbar__links">
+          <a href="/index.html" class="navbar__link">Home</a>
+          <a href="/pages/about/sobre.html" class="navbar__link">Sobre</a>
+          <a href="/pages/about/equipe.html" class="navbar__link">Equipe</a>
+          <a href="/pages/auth/login.html" class="navbar__link">Login</a>
+          <a href="/pages/contact/contato.html" class="navbar__link" aria-current="page">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+      <section class="content-section" aria-labelledby="contact-title">
+        <h1 id="contact-title">Fale Conosco</h1>
+
+        <form class="form" data-validate action="/api/contact" method="POST" aria-label="Formulário de contato">
+          <div class="form-group">
+            <label for="nome" class="sr-only">Seu nome</label>
+            <input 
+              type="text" 
+              id="nome"
+              name="nome"
+              placeholder="Seu nome" 
+              required
+              aria-required="true"
+              autocomplete="name"
+            />
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="sr-only">Seu email</label>
+            <input 
+              type="email" 
+              id="email"
+              name="email"
+              placeholder="Seu email" 
+              required
+              aria-required="true"
+              autocomplete="email"
+            />
+          </div>
+          
+          <div class="form-group">
+            <label for="mensagem" class="sr-only">Sua mensagem</label>
+            <textarea 
+              id="mensagem"
+              name="mensagem"
+              placeholder="Digite sua mensagem" 
+              required
+              aria-required="true"
+              rows="5"
+            ></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn--submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- CONTACT INFO -->
+    <section class="content-section" aria-labelledby="contact-info-title">
+      <h2 id="contact-info-title">Informações de Contato</h2>
+      <address style="font-style: normal;">
+        <p>São Paulo - SP</p>
+        <p><a href="tel:+5511984039699">(11) 98403-9699</a></p>
+        <p><a href="mailto:contato@vortexmotors.com.br">contato@vortexmotors.com.br</a></p>
+      </address>
+    </section>
+
+    <!-- WHATSAPP FLOAT -->
+    <a 
+      href="https://wa.me/5511984039699" 
+      class="whatsapp-float" 
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Fale conosco pelo WhatsApp"
+    >
+      <img 
+        src="/public/images/whatsapp.png" 
+        alt="Ícone WhatsApp" 
+        class="whatsapp-float__icon"
+        width="60"
+        height="60"
+      />
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+      <p>São Paulo - SP</p>
+      <p><a href="tel:+5511984039699">(11) 99999-9999</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/public/js/form-validation.js" defer></script>
+  </body>
+</html>

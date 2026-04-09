@@ -1,0 +1,92 @@
+# =====================================================
+# .gitignore - VORTEX MOTORS
+# Descrição: Arquivos e diretórios ignorados pelo Git
+# =====================================================
+
+# Dependências e módulos
+node_modules/
+bower_components/
+vendor/
+
+# Arquivos de build/compilação
+*.exe
+*.o
+*.obj
+*.class
+*.pyc
+__pycache__/
+
+# IDE e Editores
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs e temporários
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+tmp/
+temp/
+
+# Variáveis de ambiente e configura sensíveis
+.env
+.env.local
+.env.production
+.env.*.local
+config/database.yml
+config/secrets.yml
+
+# Sistemas operacionais
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Backups automátos
+*.bak
+*.backup
+*.old
+
+# Arquivos de teste de cobertura
+coverage/
+.nyc_output/
+*.lcov
+
+# Cache de ferramentas
+.cache/
+.eslintcache
+.stylelintcache
+
+# Build output
+dist/
+build/
+out/
+
+# Banco de dados (se houver arquivos locais)
+*.db
+*.sqlite
+*.sqlite3
+
+# Documentos office temporários
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# Arquivos específicos do projeto C
+*.exe
+eletric.exe
+
+# Outros
+*.com
+*.dll
+*.so
+*.dylib

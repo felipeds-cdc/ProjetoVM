@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Encontre pontos de carregamento para seu veículo elétrico - Vortex Motors" />
+
+    <title>VORTEX MOTORS - Pontos de Carregamento</title>
+
+    <link rel="stylesheet" href="/public/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header" role="banner">
+      <div class="header__logo">
+        <a href="/index.html" aria-label="Vortex Motors - Página inicial">
+          <img src="/public/images/LOGO.png" alt="Logo Vortex Motors" width="290" height="auto" />
+        </a>
+      </div>
+
+      <nav class="navbar" role="navigation" aria-label="Menu principal">
+        <div class="navbar__links">
+          <a href="/index.html" class="navbar__link">Home</a>
+          <a href="/pages/about/sobre.html" class="navbar__link">Sobre</a>
+          <a href="/pages/about/equipe.html" class="navbar__link">Equipe</a>
+          <a href="/pages/auth/login.html" class="navbar__link">Login</a>
+          <a href="/pages/contact/contato.html" class="navbar__link">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+      <section class="content-section" aria-labelledby="carregamento-title">
+        <h1 id="carregamento-title">Pontos de Carregamento</h1>
+
+        <form class="service-form" data-validate aria-label="Formulário de busca de pontos de carregamento">
+          <!-- Nome -->
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            class="service-form__input"
+            placeholder="Digite seu nome"
+            required
+            aria-required="true"
+          />
+
+          <!-- Placa do Carro -->
+          <label for="placa-carro">Placa do Carro:</label>
+          <input
+            type="text"
+            id="placa-carro"
+            name="placa-carro"
+            class="service-form__input"
+            placeholder="Digite a placa do carro"
+            required
+            aria-required="true"
+          />
+
+          <!-- CEP -->
+          <label for="cep">CEP:</label>
+          <input
+            type="text"
+            id="cep"
+            name="cep"
+            class="service-form__input"
+            placeholder="Digite o CEP da sua localização"
+            required
+            aria-required="true"
+            pattern="[0-9]{5}-?[0-9]{3}"
+            inputmode="numeric"
+          />
+
+          <!-- Botão -->
+          <button type="submit" class="btn btn--submit">Buscar Ponto</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- WHATSAPP FLOAT -->
+    <a
+      href="https://wa.me/5511984039699"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Fale conosco pelo WhatsApp"
+    >
+      <img
+        src="/public/images/whatsapp.png"
+        alt="Ícone WhatsApp"
+        class="whatsapp-float__icon"
+        width="60"
+        height="60"
+      />
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+      <p>&copy; 2026 Vortex Motors. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/public/js/form-validation.js" defer></script>
+  </body>
+</html>

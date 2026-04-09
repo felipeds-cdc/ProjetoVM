@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cadastre-se na Vortex Motors" />
+    <meta name="robots" content="noindex, nofollow" />
+    
+    <title>VORTEX MOTORS - Cadastro</title>
+    
+    <link rel="stylesheet" href="/public/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header" role="banner">
+      <div class="header__logo">
+        <a href="/index.html" aria-label="Vortex Motors - Página inicial">
+          <img src="/public/images/LOGO.png" alt="Logo Vortex Motors" width="290" height="auto" />
+        </a>
+      </div>
+
+      <nav class="navbar" role="navigation" aria-label="Menu principal">
+        <div class="navbar__links">
+          <a href="/index.html" class="navbar__link">Home</a>
+          <a href="/pages/about/sobre.html" class="navbar__link">Sobre</a>
+          <a href="/pages/about/equipe.html" class="navbar__link">Equipe</a>
+          <a href="/pages/auth/login.html" class="navbar__link">Login</a>
+          <a href="/pages/contact/contato.html" class="navbar__link">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+      <section class="content-section" aria-labelledby="cadastro-title">
+        <h1 id="cadastro-title">Cadastro</h1>
+
+        <form class="form" data-validate action="/api/auth/register" method="POST" aria-label="Formulário de cadastro">
+          <div class="form-group">
+            <label for="nome" class="sr-only">Nome completo</label>
+            <input 
+              type="text" 
+              id="nome"
+              name="nome"
+              placeholder="Nome completo" 
+              required
+              aria-required="true"
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="cpf" class="sr-only">CPF</label>
+            <input 
+              type="text" 
+              id="cpf"
+              name="cpf"
+              placeholder="CPF (000.000.000-00)" 
+              required
+              aria-required="true"
+              pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+              title="Formato: 000.000.000-00"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="nascimento" class="sr-only">Data de Nascimento</label>
+            <input 
+              type="date" 
+              id="nascimento"
+              name="nascimento"
+              required
+              aria-required="true"
+              autocomplete="bday"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="sr-only">Email</label>
+            <input 
+              type="email" 
+              id="email"
+              name="email"
+              placeholder="Email" 
+              required
+              aria-required="true"
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="senha" class="sr-only">Senha</label>
+            <input 
+              type="password" 
+              id="senha"
+              name="senha"
+              placeholder="Crie uma senha (mínimo 6 caracteres)" 
+              required
+              aria-required="true"
+              minlength="6"
+              autocomplete="new-password"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="carro" class="sr-only">Modelo do carro</label>
+            <select id="carro" name="carro" required aria-required="true">
+              <option value="">Modelo do carro</option>
+              <option value="gol">Gol</option>
+              <option value="onix">Onix</option>
+              <option value="hb20">HB20</option>
+              <option value="civic">Civic</option>
+              <option value="corolla">Corolla</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="placa" class="sr-only">Placa do carro</label>
+            <input 
+              type="text" 
+              id="placa"
+              name="placa"
+              placeholder="Placa do carro (ABC-1D23)" 
+              pattern="[A-Z]{3}-\d[0-9A-Z]\d{2}"
+              title="Formato: ABC-1D23"
+              autocomplete="off"
+            />
+          </div>
+
+          <button type="submit" class="btn btn--submit">Cadastrar</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- WHATSAPP FLOAT -->
+    <a 
+      href="https://wa.me/5511984039699" 
+      class="whatsapp-float" 
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Fale conosco pelo WhatsApp"
+    >
+      <img 
+        src="/public/images/whatsapp.png" 
+        alt="Ícone WhatsApp" 
+        class="whatsapp-float__icon"
+        width="60"
+        height="60"
+      />
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+      <p>&copy; 2026 Vortex Motors. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/public/js/form-validation.js" defer></script>
+  </body>
+</html>

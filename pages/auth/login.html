@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Faça login na sua conta Vortex Motors" />
+    <meta name="robots" content="noindex, nofollow" />
+    
+    <title>VORTEX MOTORS - Login</title>
+    
+    <link rel="stylesheet" href="/public/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header" role="banner">
+      <div class="header__logo">
+        <a href="/index.html" aria-label="Vortex Motors - Página inicial">
+          <img src="/public/images/LOGO.png" alt="Logo Vortex Motors" width="290" height="auto" />
+        </a>
+      </div>
+
+      <nav class="navbar" role="navigation" aria-label="Menu principal">
+        <div class="navbar__links">
+          <a href="/index.html" class="navbar__link">Home</a>
+          <a href="/pages/about/sobre.html" class="navbar__link">Sobre</a>
+          <a href="/pages/about/equipe.html" class="navbar__link">Equipe</a>
+          <a href="/pages/auth/login.html" class="navbar__link" aria-current="page">Login</a>
+          <a href="/pages/contact/contato.html" class="navbar__link">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+      <section class="content-section" aria-labelledby="login-title">
+        <h1 id="login-title">Login</h1>
+
+        <form class="form" data-validate action="/api/auth/login" method="POST" aria-label="Formulário de login">
+          <div class="form-group">
+            <label for="email" class="sr-only">Email</label>
+            <input 
+              type="email" 
+              id="email"
+              name="email"
+              placeholder="Digite seu email" 
+              required
+              aria-required="true"
+              autocomplete="email"
+            />
+          </div>
+          
+          <div class="form-group">
+            <label for="password" class="sr-only">Senha</label>
+            <input 
+              type="password" 
+              id="password"
+              name="password"
+              placeholder="Digite sua senha" 
+              required
+              aria-required="true"
+              minlength="6"
+              autocomplete="current-password"
+            />
+          </div>
+          
+          <button type="submit" class="btn btn--submit">Entrar</button>
+          
+          <p class="form-footer">
+            <a href="/pages/auth/cadastro.html" class="link-cadastro">
+              Não tem cadastro? Cadastre-se
+            </a>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <!-- WHATSAPP FLOAT -->
+    <a 
+      href="https://wa.me/5511984039699" 
+      class="whatsapp-float" 
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Fale conosco pelo WhatsApp"
+    >
+      <img 
+        src="/public/images/whatsapp.png" 
+        alt="Ícone WhatsApp" 
+        class="whatsapp-float__icon"
+        width="60"
+        height="60"
+      />
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+      <p>&copy; 2026 Vortex Motors. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/public/js/form-validation.js" defer></script>
+  </body>
+</html>
