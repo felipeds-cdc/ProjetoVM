@@ -282,7 +282,7 @@ a:hover {
    7. SEÇÕES DE CONTEÚDO
    ===================================================== */
 .content-section {
-  padding: 60px;
+  padding: 50px;
   text-align: center;
 }
 
@@ -390,6 +390,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px;
     gap: var(--spacing-sm);
 }
 
@@ -456,7 +457,17 @@ a:hover {
 }
 
 .form_button:hover {
-    background: var(--color-primary);
+    background: rgb(14, 13, 13);
+}
+
+.form_footer{
+    margin-top: 15px;
+    font-size: 15px;
+    transition: transform var(--transition-slow);
+}
+
+.form_footer:hover {
+  transform: scale(1.1);
 }
 
 /* =====================================================
