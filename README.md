@@ -1,6 +1,6 @@
 # 🚗 Vortex Motors - O Futuro em Movimento
 
-![Vortex Motors](/public/images/LOGO.png)
+![Vortex Motors](/img/LOGO.png)
 
 > **Plataforma digital para comercialização de veículos e peças automotivas**
 
