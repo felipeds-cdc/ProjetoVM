@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vortex Motors - Conheça a equipe por trás do projeto."/>
+    <title>VORTEX MOTORS - Equipe</title>
+
+    <!-- Aurora Design System -->
+    <link rel="stylesheet" href="/public/css/aurora.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="/img/LOGO.png" />
+  </head>
+
+  <!-- au-body → cursor inteligente + base escura -->
+  <body class="au-body">
+
+    <!-- ══════════ HEADER STICKY ═════════════════════════════════════ -->
+    <header class="au-header" role="banner">
+      <a href="/index.html" class="au-logo" aria-label="Vortex Motors - Página inicial">
+        <img src="/img/LOGO.png" alt="Logo Vortex Motors" width="160" height="auto"/></a>
+
+      <nav role="navigation" aria-label="Menu principal">
+        <ul class="au-nav">
+          <li><a href="/index.html" class="au-nav__link">Home</a></li>
+          <li><a href="/pages/about/sobre.html" class="au-nav__link">Sobre</a></li>
+          <li><a href="/pages/equipe/equipe.html" class="au-nav__link au-nav__link--active" aria-current="page">Equipe</a></li>
+          <li><a href="/pages/auth/login.html" class="au-nav__link">Login</a></li>
+          <li><a href="/pages/contact/contato.html" class="au-nav__link"></a></li>
+        </ul></nav>
+
+      <a href="/pages/contact/contato.html" class="au-btn au-btn--solid au-btn--sm">Contato</a>
+    </header>
+
+    <main id="main-content">
+      <!-- ── HERO COMPACTO ─────────────────────────────────── -->
+      <section class="au-section" style="padding-top: 10rem; padding-bottom: 4rem; text-align: center; border-bottom: 1px solid var(--au-divider);" aria-labelledby="equipe-title">
+
+        <div class="au-container">
+          <span class="au-reveal au-section-header__eyebrow">Vortex Motors</span>
+          <h1 id="equipe-title" class="au-reveal au-h1 au-reveal--d1" style="margin-bottom: 1rem">Nossa Equipe</h1>
+
+          <p class="au-reveal au-body-text au-reveal--d2" style="margin: 0 auto; text-align: center">
+          Os desenvolvedores por trás da Vortex Motors.</p>
+
+          <hr class="au-divider--gold au-reveal au-reveal--d3" style="margin: 2rem auto 0"/>
+        </div>
+      </section>
+
+      <!-- ── CARROSSEL DE MEMBROS ───────────────────────────── -->
+      <section class="au-section" aria-labelledby="membros-title">
+        <div class="au-container">
+          <div class="au-section-header au-reveal">
+            <span class="au-section-header__eyebrow">Equipe</span>
+            <h2 id="membros-title" class="au-section-header__title">Conheça os membros</h2>
+          </div>
+
+          <div class="au-reveal au-reveal--d1">
+            <div class="team-carousel-wrapper">
+              <!-- Seta esquerda -->
+              <button class="carousel-arrow" id="prevBtn" aria-label="Anterior">
+                &#10094;
+              </button>
+
+              <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+
+                  <!-- ── MEMBRO 1 ── -->
+                  <div class="team-card" role="article"aria-label="Matheus Levy">
+                    <div class="team-card__photo-wrap">
+                      <img src="/img/equipe/matheuslevy.jpeg" alt="Matheus Levy" class="team-card__photo" loading="lazy"/>
+                    </div>
+                    <div class="team-card__gold-line"></div>
+                    <div class="team-card__body">
+                      <div class="team-card__role">Documentação</div>
+                      <div class="team-card__name">Matheus Levy</div>
+                      <p class="team-card__desc">
+                        Responsável pela documentação do projeto.</p>
+                      <a href="https://www.instagram.com/arianagrande/" class="au-btn au-btn--ghost au-btn--sm"
+                      target="_blank" rel="noopener noreferrer">@ Instagram</a>
+                    </div>
+                  </div>
+
+                  <!-- ── MEMBRO 2 ── -->
+                  <div class="team-card" role="article" aria-label="Felipe Diassis">
+                    <div class="team-card__photo-wrap">
+                      <img src="/img/equipe/felipediassis.jpg" alt="Felipe Diassis" class="team-card__photo" loading="lazy"/>
+                    </div>
+                    <div class="team-card__gold-line"></div>
+                    <div class="team-card__body">
+                      <div class="team-card__role">Frontend</div>
+                      <div class="team-card__name">Felipe Diassis</div>
+                      <p class="team-card__desc">Responsável pelo desenvolvimento frontend.</p>
+                      <a href="https://instagram.com/usuario" class="au-btn au-btn--ghost au-btn--sm" target="_blank" rel="noopener noreferrer">@ Instagram</a>
+                    </div>
+                  </div>
+
+                  <!-- ── MEMBRO 3 ── -->
+                  <div class="team-card" role="article" aria-label="Julia Zézilia">
+                    <div class="team-card__photo-wrap">
+                      <img src="/img/equipe/juliazezilia.jpeg" alt="Julia Zézilia" class="team-card__photo" loading="lazy" />
+                    </div>
+                    <div class="team-card__gold-line"></div>
+                    <div class="team-card__body">
+                      <div class="team-card__role">Banco de Dados</div>
+                      <div class="team-card__name">Julia Zézilia</div>
+                      <p class="team-card__desc">Responsável pelo desenvolvimento de banco de dados.</p>
+                      <a href="https://instagram.com/usuario" class="au-btn au-btn--ghost au-btn--sm" target="_blank" rel="noopener noreferrer">@ Instagram</a>
+                    </div>
+                  </div>
+
+                  <!-- ── MEMBRO 4 ── -->
+                  <div class="team-card" role="article" aria-label="Gabriel Oliani">
+                    <div class="team-card__photo-wrap">
+                      <img src="/img/equipe/gabrieloliani.jpeg" alt="Gabriel Oliani" class="team-card__photo" loading="lazy" />
+                    </div>
+                    <div class="team-card__gold-line"></div>
+                    <div class="team-card__body">
+                      <div class="team-card__role">Banco de Dados</div>
+                      <div class="team-card__name">Gabriel Oliani</div>
+                      <p class="team-card__desc">Responsável pelo desenvolvimento de banco de dados.</p>
+                      <a href="https://instagram.com/SEU_USUARIO" class="au-btn au-btn--ghost au-btn--sm" target="_blank" rel="noopener noreferrer">@ Instagram</a>
+                    </div>
+                  </div>
+
+                  <!-- ── MEMBRO 5 ── -->
+                  <div class="team-card" role="article" aria-label="Pedro Monteiro">
+                    <div class="team-card__photo-wrap">
+                      <img src="/img/equipe/pedromonteiro.jpeg" alt="Pedro Monteiro" class="team-card__photo" loading="lazy" />
+                    </div>
+                    <div class="team-card__gold-line"></div>
+                    <div class="team-card__body">
+                      <div class="team-card__role">Frontend</div>
+                      <div class="team-card__name">Pedro Monteiro</div>
+                      <p class="team-card__desc">Responsável pelo desenvolvimento frontend.</p>
+                      <a href="https://instagram.com/SEU_USUARIO" class="au-btn au-btn--ghost au-btn--sm" target="_blank" rel="noopener noreferrer">@ Instagram</a>
+                    </div>
+                  </div>
+
+                  <!-- ── MEMBRO 6 ── -->
+                  <div class="team-card" role="article" aria-label="João Victor">
+                    <div class="team-card__photo-wrap">
+                      <img src="/img/equipe/joaovictor.jpeg" alt="João Victor" class="team-card__photo" loading="lazy" />
+                    </div>
+                    <div class="team-card__gold-line"></div>
+                    <div class="team-card__body">
+                      <div class="team-card__role">Backend</div>
+                      <div class="team-card__name">João Victor</div>
+                      <p class="team-card__desc">Responsável pelo desenvolvimento backend.</p>
+                      <a href="https://instagram.com/SEU_USUARIO" class="au-btn au-btn--ghost au-btn--sm" target="_blank" rel="noopener noreferrer">@ Instagram</a>
+                    </div>
+                  </div>
+
+                  <!-- ── MEMBRO 7 ── -->
+                  <div class="team-card" role="article" aria-label="Marcelo Floriano">
+                    <div class="team-card__photo-wrap">
+                      <img src="/img/equipe/marcelofloriano.jpeg" alt="Marcelo Floriano" class="team-card__photo" loading="lazy" />
+                    </div>
+                    <div class="team-card__gold-line"></div>
+                    <div class="team-card__body">
+                      <div class="team-card__role">Frontend</div>
+                      <div class="team-card__name">Marcelo Floriano</div>
+                      <p class="team-card__desc">Responsável pelo desenvolvimento frontend.</p>
+                      <a href="https://instagram.com/SEU_USUARIO" class="au-btn au-btn--ghost au-btn--sm" target="_blank" rel="noopener noreferrer">@ Instagram</a>
+                    </div>
+                  </div>
+
+                  <!-- ── MEMBRO 8 ── -->
+                  <div class="team-card" role="article" aria-label="Matheus Luca">
+                    <div class="team-card__photo-wrap">
+                      <img src="/img/equipe/matheusluca.jpeg" alt="Matheus Luca" class="team-card__photo" loading="lazy" />
+                    </div>
+                    <div class="team-card__gold-line"></div>
+                    <div class="team-card__body">
+                      <div class="team-card__role">Frontend</div>
+                      <div class="team-card__name">Matheus Luca</div>
+                      <p class="team-card__desc">Responsável pelo desenvolvimento frontend.</p>
+                      <a href="https://instagram.com/SEU_USUARIO" class="au-btn au-btn--ghost au-btn--sm" target="_blank" rel="noopener noreferrer">@ Instagram</a>
+                    </div>
+                  </div>
+
+                  <!-- ── MEMBRO 9 ── -->
+                  <div class="team-card" role="article" aria-label="Renan Vitor">
+                    <div class="team-card__photo-wrap">
+                      <img src="/img/equipe/renanvitor.jpeg" alt="Renan Vitor" class="team-card__photo" loading="lazy" />
+                    </div>
+                    <div class="team-card__gold-line"></div>
+                    <div class="team-card__body">
+                      <div class="team-card__role">Frontend</div>
+                      <div class="team-card__name">Renan Vitor</div>
+                      <p class="team-card__desc">Responsável pelo desenvolvimento frontend.</p>
+                      <a href="https://instagram.com/SEU_USUARIO" class="au-btn au-btn--ghost au-btn--sm" target="_blank" rel="noopener noreferrer">@ Instagram</a>
+                    </div>
+                  </div>
+
+                </div> <!-- /carousel-track -->
+              </div> <!-- /carousel-container -->
+
+              <button class="carousel-arrow" id="nextBtn" aria-label="Próximo">&#10095;</button> <!-- Seta direita -->
+            </div> <!-- /team-carousel-wrapper -->
+
+            <!-- Dots -->
+            <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navegação do carrossel"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5511984039699" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+      aria-label="Fale conosco pelo WhatsApp" data-au-cursor-hover>
+      <img src="/img/whatsapp.png" alt="Ícone WhatsApp" class="whatsapp-float__icon" width="60" height="60" /></a>
+
+    <!-- Aurora JS -->
+    <script src="/public/js/aurora.js"></script>
+    <!-- Carrossel (inalterado) -->
+    <script src="/public/js/team-carousel.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1201 @@
+/* ============================================================
+   AURORA — Luxury Automotive Design System
+   Paleta Triádica: #0A0A0A · #FFFFFF · #FFD700
+   ============================================================
+   COMO USAR:
+   Adicione as classes abaixo diretamente nos seus elementos HTML.
+   Exemplo: <nav class="au-header">
+   ============================================================ */
+
+/* ── RESET & BASE ─────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── CSS CUSTOM PROPERTIES ────────────────────────────────── */
+
+:root {
+  --au-black: #0a0a0a;
+  --au-black2: #111111;
+  --au-card-bg: #141414;
+  --au-divider: #1a1a1a;
+  --au-gray: #888888;
+  --au-light-gray: #cccccc;
+  --au-white: #ffffff;
+  --au-gold: #00c8ff;
+  --au-gold-dim: rgba(0, 200, 255, 0.15);
+  --au-gold-hover: rgba(0, 200, 255, 0.08);
+  --au-transition: 0.3s ease;
+  --au-font: "Rajdhani", sans-serif;
+
+  /* Tipografia */
+  --au-ls-h1: 0.08em;
+  --au-ls-h2: 0.12em;
+  --au-ls-h3: 0.2em;
+  --au-ls-nav: 0.2em;
+  --au-ls-cta: 0.18em;
+  --au-ls-label: 0.25em;
+}
+
+/* ── BODY BASE ────────────────────────────────────────────── */
+/* Classe: au-body */
+
+.au-body {
+  background-color: var(--au-black);
+  color: var(--au-white);
+  font-family: var(--au-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: none; /* Ativa o custom cursor (requer aurora.js) */
+}
+
+/* ── LAYOUT: CONTAINERS & SEÇÕES ──────────────────────────── */
+/* Classes: au-section, au-section--white, au-section--dark, au-container */
+
+.au-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.au-section {
+  padding: 6rem 2rem;
+  background-color: var(--au-black);
+}
+
+.au-section--white {
+  padding: 6rem 2rem;
+  background-color: var(--au-white);
+  color: var(--au-black);
+}
+
+.au-section--dark {
+  padding: 6rem 2rem;
+  background-color: var(--au-card-bg);
+}
+
+/* ── HEADER STICKY ────────────────────────────────────────── */
+/* Classe: au-header
+   Estado após scroll: au-header--scrolled (adicionado via JS) */
+
+.au-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition:
+    padding var(--au-transition),
+    background var(--au-transition),
+    border-color var(--au-transition),
+    backdrop-filter var(--au-transition);
+}
+
+.au-header--scrolled {
+  padding: 0.75rem 2rem;
+  background: rgba(10, 10, 10, 0.92);
+  border-bottom-color: var(--au-divider);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Logo dentro do header */
+/* Classe: au-logo */
+
+.au-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  letter-spacing: var(--au-ls-label);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--au-white);
+  text-decoration: none;
+}
+
+/* Nav links dentro do header */
+/* Classe: au-nav / au-nav__link */
+
+.au-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.au-nav__link {
+  font-size: 10px;
+  letter-spacing: var(--au-ls-nav);
+  color: var(--au-gray);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color var(--au-transition);
+}
+
+.au-nav__link:hover {
+  color: var(--au-white);
+}
+
+.au-nav__link--active {
+  color: var(--au-white);
+}
+
+/* ── TIPOGRAFIA ───────────────────────────────────────────── */
+/* Classes: au-h1, au-h2, au-h3, au-body-text, au-label, au-caption */
+
+.au-h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: var(--au-ls-h1);
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: var(--au-white);
+}
+
+.au-h2 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  letter-spacing: var(--au-ls-h2);
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--au-white);
+}
+
+.au-h3 {
+  font-size: clamp(0.875rem, 2vw, 1.1rem);
+  letter-spacing: var(--au-ls-h3);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--au-gold);
+}
+
+.au-body-text {
+  font-size: 14px;
+  color: var(--au-light-gray);
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+.au-label {
+  font-size: 10px;
+  letter-spacing: var(--au-ls-label);
+  text-transform: uppercase;
+  color: var(--au-gray);
+}
+
+.au-caption {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--au-gray);
+  line-height: 1.6;
+}
+
+/* Texto gold */
+.au-text--gold {
+  color: var(--au-gold);
+}
+.au-text--white {
+  color: var(--au-white);
+}
+.au-text--muted {
+  color: var(--au-gray);
+}
+
+/* ── BOTÕES ───────────────────────────────────────────────── */
+/* Classes: au-btn, au-btn--ghost, au-btn--solid, au-btn--outline */
+
+.au-btn {
+  display: inline-block;
+  font-family: var(--au-font);
+  font-size: 10px;
+  letter-spacing: var(--au-ls-cta);
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 32px;
+  border-radius: 0;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    background var(--au-transition),
+    color var(--au-transition),
+    border-color var(--au-transition),
+    opacity var(--au-transition);
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Ghost: borda dourada, preenche dourado no hover */
+.au-btn--ghost {
+  background: transparent;
+  border-color: var(--au-gold);
+  color: var(--au-gold);
+}
+
+.au-btn--ghost:hover {
+  background: var(--au-gold);
+  color: var(--au-black);
+}
+
+/* Solid: preenchido dourado */
+.au-btn--solid {
+  background: var(--au-gold);
+  border-color: var(--au-gold);
+  color: var(--au-black);
+}
+
+.au-btn--solid:hover {
+  opacity: 0.85;
+}
+
+/* Outline branco */
+.au-btn--outline {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--au-white);
+}
+
+.au-btn--outline:hover {
+  border-color: var(--au-white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Modificadores de tamanho */
+.au-btn--sm {
+  padding: 8px 20px;
+  font-size: 9px;
+}
+.au-btn--lg {
+  padding: 16px 48px;
+  font-size: 11px;
+}
+
+/* ── INPUTS & FORMULÁRIOS ─────────────────────────────────── */
+/* Classes: au-input, au-select, au-textarea, au-form-group, au-form-label */
+
+.au-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.au-form-label {
+  font-size: 9px;
+  letter-spacing: var(--au-ls-label);
+  text-transform: uppercase;
+  color: var(--au-gray);
+}
+
+.au-input,
+.au-select,
+.au-textarea {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #2a2a2a;
+  border-radius: 0;
+  color: var(--au-white);
+  font-family: var(--au-font);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  padding: 11px 16px;
+  outline: none;
+  transition: border-color var(--au-transition);
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.au-input::placeholder,
+.au-textarea::placeholder {
+  color: #3a3a3a;
+  letter-spacing: 0.05em;
+}
+
+.au-input:focus,
+.au-select:focus,
+.au-textarea:focus {
+  border-color: var(--au-gold);
+}
+
+.au-select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+
+.au-select option {
+  background: #141414;
+  color: var(--au-white);
+}
+
+.au-textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* ── CARDS DE VEÍCULO ─────────────────────────────────────── */
+/* Classes: au-card, au-card__image, au-card__body,
+            au-card__number, au-card__name, au-card__sub */
+
+.au-card {
+  background: var(--au-card-bg);
+  border: 1px solid var(--au-divider);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color var(--au-transition);
+  position: relative;
+}
+
+.au-card:hover {
+  border-color: var(--au-gold);
+}
+
+.au-card:hover .au-card__image img,
+.au-card:hover .au-card__image video {
+  transform: scale(1.04);
+}
+
+.au-card:hover .au-card__gold-line {
+  width: 100%;
+}
+
+.au-card__image {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--au-black2);
+}
+
+.au-card__image img,
+.au-card__image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.au-card__gold-line {
+  height: 2px;
+  width: 0;
+  background: var(--au-gold);
+  transition: width 0.4s ease;
+}
+
+.au-card__body {
+  padding: 1.25rem;
+}
+
+.au-card__number {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--au-gold);
+  margin-bottom: 4px;
+}
+
+.au-card__name {
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  color: var(--au-white);
+}
+
+.au-card__sub {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--au-gray);
+}
+
+/* ── GRID DE CARDS ────────────────────────────────────────── */
+/* Classes: au-grid-2, au-grid-3, au-grid-4 */
+
+.au-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.au-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.au-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .au-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .au-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .au-grid-4,
+  .au-grid-3,
+  .au-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── HERO SECTION ─────────────────────────────────────────── */
+/* Classes: au-hero, au-hero__bg, au-hero__overlay, au-hero__content */
+
+.au-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--au-black);
+}
+
+.au-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Parallax aplicado via JS na classe au-parallax */
+}
+
+.au-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 10, 10, 0.85) 0%,
+    rgba(10, 10, 10, 0.4) 60%,
+    transparent 100%
+  );
+}
+
+.au-hero__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 2rem;
+  max-width: 640px;
+}
+
+/* ── DIVISÓRIAS ───────────────────────────────────────────── */
+/* Classes: au-divider, au-divider--fade, au-divider--gold */
+
+.au-divider {
+  height: 1px;
+  background: var(--au-divider);
+  width: 100%;
+  border: none;
+}
+
+.au-divider--fade {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #2a2a2a 30%,
+    #2a2a2a 70%,
+    transparent
+  );
+  width: 100%;
+  border: none;
+}
+
+.au-divider--gold {
+  height: 2px;
+  background: var(--au-gold);
+  width: 60px;
+  border: none;
+}
+
+/* ── SECTION TITLE BLOCK ──────────────────────────────────── */
+/* Classe: au-section-header */
+
+.au-section-header {
+  margin-bottom: 3rem;
+}
+
+.au-section-header__eyebrow {
+  font-size: 10px;
+  letter-spacing: var(--au-ls-label);
+  color: var(--au-gold);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.au-section-header__title {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  letter-spacing: var(--au-ls-h1);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--au-white);
+  margin-bottom: 1rem;
+}
+
+.au-section-header__body {
+  font-size: 14px;
+  color: var(--au-light-gray);
+  line-height: 1.8;
+  max-width: 480px;
+}
+
+/* ── ANIMAÇÕES DE SCROLL ──────────────────────────────────── */
+/* Classe inicial: au-reveal
+   Classe ativada pelo JS quando entra na viewport: au-reveal--visible */
+
+.au-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.au-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variantes de delay para cascata */
+.au-reveal--d1 {
+  transition-delay: 0.1s;
+}
+.au-reveal--d2 {
+  transition-delay: 0.2s;
+}
+.au-reveal--d3 {
+  transition-delay: 0.3s;
+}
+.au-reveal--d4 {
+  transition-delay: 0.4s;
+}
+.au-reveal--d5 {
+  transition-delay: 0.5s;
+}
+
+/* Variante: surge da esquerda */
+.au-reveal--left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.au-reveal--left.au-reveal--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Variante: surge da direita */
+.au-reveal--right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.au-reveal--right.au-reveal--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── PARALLAX ─────────────────────────────────────────────── */
+/* Classe: au-parallax
+   O JS aplica transform: translateY() automaticamente */
+
+.au-parallax {
+  will-change: transform;
+  transition: transform 0.05s linear;
+}
+
+/* ── CUSTOM CURSOR ────────────────────────────────────────── */
+/* ID: #au-cursor
+   Gerado automaticamente pelo JS se .au-body estiver presente */
+
+#au-cursor {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--au-gold);
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    background 0.2s ease;
+  will-change: transform;
+}
+
+#au-cursor.au-cursor--hover {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1.5px solid var(--au-gold);
+}
+
+/* ── FOOTER ───────────────────────────────────────────────── */
+/* Classe: au-footer */
+
+.au-footer {
+  background: var(--au-black2);
+  border-top: 1px solid var(--au-divider);
+  padding: 4rem 2rem;
+}
+
+.au-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.au-footer__heading {
+  font-size: 9px;
+  letter-spacing: var(--au-ls-label);
+  text-transform: uppercase;
+  color: var(--au-white);
+  margin-bottom: 1rem;
+}
+
+.au-footer__link {
+  display: block;
+  font-size: 12px;
+  color: var(--au-gray);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color var(--au-transition);
+}
+
+.au-footer__link:hover {
+  color: var(--au-white);
+}
+
+.au-footer__bottom {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--au-divider);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .au-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .au-footer__bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .au-nav {
+    display: none;
+  }
+}
+
+/* ── BADGE / TAG ──────────────────────────────────────────── */
+/* Classes: au-badge, au-badge--gold, au-badge--white */
+
+.au-badge {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 0;
+  font-weight: 500;
+}
+
+.au-badge--gold {
+  background: var(--au-gold-dim);
+  color: var(--au-gold);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.au-badge--white {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--au-white);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ── SPEC ROW (Ficha técnica) ─────────────────────────────── */
+/* Classes: au-specs, au-spec-row */
+
+.au-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.au-spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--au-divider);
+  font-size: 12px;
+}
+
+.au-spec-row__key {
+  color: var(--au-gray);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.au-spec-row__value {
+  color: var(--au-white);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* ── OVERLAY ESCURO ───────────────────────────────────────── */
+/* Classe: au-overlay */
+
+.au-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.9);
+  z-index: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--au-transition);
+}
+
+.au-overlay--active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── Carrossel — estilos próprios sobre o Aurora ── */
+
+.team-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+/* Cards de membro — extensão do au-card */
+.team-card {
+  flex: 0 0 calc(25% - 18px);
+  min-width: 220px;
+  background: var(--au-card-bg);
+  border: 1px solid var(--au-divider);
+  overflow: hidden;
+  transition: border-color var(--au-transition);
+  cursor: default;
+}
+
+.team-card:hover {
+  border-color: var(--au-gold);
+}
+
+.team-card:hover .team-card__gold-line {
+  width: 100%;
+}
+
+.team-card:hover .team-card__photo {
+  transform: scale(1.05);
+}
+
+.team-card__photo-wrap {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--au-black2);
+}
+
+.team-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  filter: grayscale(20%);
+}
+
+.team-card__gold-line {
+  height: 2px;
+  width: 0;
+  background: var(--au-gold);
+  transition: width 0.4s ease;
+}
+
+.team-card__body {
+  padding: 1.25rem;
+}
+
+.team-card__role {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--au-gold);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.team-card__name {
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--au-white);
+  margin-bottom: 4px;
+}
+
+.team-card__desc {
+  font-size: 11px;
+  color: var(--au-gray);
+  line-height: 1.6;
+  margin-bottom: 14px;
+  letter-spacing: 0.03em;
+}
+
+/* ── Botões do carrossel ── */
+
+.carousel-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 1px solid var(--au-divider);
+  color: var(--au-gray);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border-color var(--au-transition),
+    color var(--au-transition),
+    background var(--au-transition);
+  border-radius: 0;
+  font-family: var(--au-font);
+}
+
+.carousel-arrow:hover:not(:disabled) {
+  border-color: var(--au-gold);
+  color: var(--au-gold);
+  background: var(--au-gold-hover);
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+/* ── Dots ── */
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2rem;
+}
+
+.carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--au-divider);
+  border: none;
+  cursor: pointer;
+  transition:
+    background var(--au-transition),
+    transform var(--au-transition);
+  padding: 0;
+}
+
+.carousel-dot.active {
+  background: var(--au-gold);
+  transform: scale(1.4);
+}
+
+/* ── Responsivo ── */
+
+@media (max-width: 1200px) {
+  .team-card {
+    flex: 0 0 calc(33.333% - 16px);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-card {
+    flex: 0 0 calc(50% - 12px);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-card {
+    flex: 0 0 calc(100% - 0px);
+    min-width: 0;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+       FILTROS DE BUSCA
+       Barra de filtros acima do grid de veículos.
+    ───────────────────────────────────────────────────────── */
+.filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+  padding: 2rem;
+  background: var(--au-card-bg);
+  border: 1px solid var(--au-divider);
+  margin-bottom: 3rem;
+}
+
+.filters-bar .au-form-group {
+  flex: 1;
+  min-width: 160px;
+}
+
+.filters-bar .au-btn {
+  align-self: flex-end;
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────────────────────
+       CONTAGEM DE RESULTADOS
+    ───────────────────────────────────────────────────────── */
+.results-count {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--au-gray);
+  margin-bottom: 1.5rem;
+}
+
+.results-count span {
+  color: var(--au-gold);
+  font-weight: 500;
+}
+
+/* ─────────────────────────────────────────────────────────
+       CARD VEÍCULO — extensão de .au-card
+       Estrutura:
+         .vehicle-card
+           .au-card__image        → foto com zoom no hover
+           .au-card__gold-line    → linha dourada animada
+           .vehicle-card__body
+             .vehicle-card__tags  → badges (Novo / Seminovo / Elétrico)
+             .vehicle-card__name  → nome do modelo
+             .vehicle-card__meta  → ano · câmbio · motor
+             .vehicle-card__specs → minispec (potência, km, cor)
+             .vehicle-card__price → preço em destaque
+             .vehicle-card__actions → botões
+    ───────────────────────────────────────────────────────── */
+.vehicle-card {
+  background: var(--au-card-bg);
+  border: 1px solid var(--au-divider);
+  overflow: hidden;
+  transition: border-color var(--au-transition);
+}
+
+.vehicle-card:hover {
+  border-color: var(--au-gold);
+}
+
+.vehicle-card:hover .au-card__image img {
+  transform: scale(1.04);
+}
+
+.vehicle-card:hover .au-card__gold-line {
+  width: 100%;
+}
+
+.vehicle-card__body {
+  padding: 1.25rem;
+}
+
+.vehicle-card__tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.vehicle-card__name {
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--au-white);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.vehicle-card__meta {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--au-gray);
+  margin-bottom: 14px;
+}
+
+/* Mini-specs: 3 colunas de ícone + valor */
+.vehicle-card__specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 12px 0;
+  border-top: 1px solid var(--au-divider);
+  border-bottom: 1px solid var(--au-divider);
+  margin-bottom: 14px;
+}
+
+.vehicle-card__spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.vehicle-card__spec-label {
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--au-gray);
+}
+
+.vehicle-card__spec-value {
+  font-size: 11px;
+  color: var(--au-light-gray);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.vehicle-card__price {
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  color: var(--au-gold);
+  margin-bottom: 14px;
+}
+
+.vehicle-card__price-label {
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  color: var(--au-gray);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.vehicle-card__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.vehicle-card__actions .au-btn {
+  flex: 1;
+  text-align: center;
+  font-size: 9px;
+  padding: 9px 12px;
+}
+
+/* ─────────────────────────────────────────────────────────
+       PAGINAÇÃO
+    ───────────────────────────────────────────────────────── */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4rem;
+}
+
+.pagination__btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--au-divider);
+  color: var(--au-gray);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition:
+    border-color var(--au-transition),
+    color var(--au-transition),
+    background var(--au-transition);
+  font-family: var(--au-font);
+  border-radius: 0;
+}
+
+.pagination__btn:hover,
+.pagination__btn--active {
+  border-color: var(--au-gold);
+  color: var(--au-gold);
+}
+
+.pagination__btn--active {
+  background: var(--au-gold-dim);
+}
+
+/* ── SCROLL SUAVE GLOBAL ──────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+a:hover {
+  transform: scale(1.2);
+  transition: 0.3s ease;
+}
+
+/* ── SCROLLBAR CUSTOMIZADA ────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--au-black);
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--au-gold);
+}

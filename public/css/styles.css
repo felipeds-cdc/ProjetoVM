@@ -310,6 +310,12 @@ a:hover {
   margin-bottom: var(--spacing-xl);
 }
 
+.card__subtitle {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
 .card {
   background: var(--bg-glass-light);
   padding: 20px;

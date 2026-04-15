@@ -1,86 +1,525 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Vortex Motors - O futuro em movimento. Conheça os melhores carros e peças automotivas pelo melhor custo-benefício do mercado." />
-    <meta name="keywords" content="carros, peças automotivas, veículos, manutenção, vendas de carros" />
-    <meta name="author" content="Vortex Motors" />
-    <meta name="theme-color" content="#00c8ff" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vortexmotors.com.br/" />
-    <meta property="og:title" content="VORTEX MOTORS - O Futuro em Movimento" />
-    <meta property="og:description" content="Conheça os melhores carros e peças automotivas pelo melhor custo-benefício." />
-    <meta property="og:image" content="/public/images/LOGO.png" />
 
-    <title>VORTEX MOTORS - Home</title>
-    
-    <link rel="stylesheet" href="/public/css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="/public/images/LOGO.png" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vortex Motors - O futuro em movimento. Conheça os melhores carros e peças automotivas pelo melhor custo-benefício do mercado." />
+  <meta name="keywords" content="carros, peças automotivas, veículos, manutenção, vendas de carros" />
+  <meta name="author" content="Vortex Motors" />
+  <meta name="theme-color" content="#0A0A0A" />
 
-  <body>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vortexmotors.com.br/" />
+  <meta property="og:title" content="VORTEX MOTORS - O Futuro em Movimento" />
+  <meta property="og:description" content="Conheça os melhores carros e peças automotivas pelo melhor custo-benefício." />
+  <meta property="og:image" content="/public/images/LOGO.png" />
+  <title>VORTEX MOTORS - Home</title>
 
-    <!-- HEADER -->
-    <header class="header" role="banner">
-      <div class="header__logo">
-        <a href="/index.html" aria-label="Vortex Motors - Página inicial">
-          <img src="/public/images/LOGO.png" alt="Logo Vortex Motors" width="290" height="auto" />
-        </a>
-      </div>
+  <!-- Aurora Design System -->
+  <link rel="stylesheet" href="/public/css/aurora.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/public/images/LOGO.png" />
+</head>
 
-      <nav class="navbar" role="navigation" aria-label="Menu principal">
-        <div class="navbar__links">
-          <a href="/index.html" class="navbar__link" aria-current="page">Home</a>
-          <a href="/pages/about/sobre.html" class="navbar__link">Sobre</a>
-          <a href="/pages/equipe/equipe.html" class="navbar__link">Equipe</a>
-          <a href="/pages/auth/login.html" class="navbar__link">Login</a>
-          <a href="/pages/contact/contato.html" class="navbar__link">Contato</a>
-        </div>
-      </nav>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <main id="main-content">
-      <!-- BANNER HERO -->
-      <section class="banner" aria-labelledby="banner-title">
-        <div class="banner__content">
-          <h1 id="banner-title">O FUTURO EM MOVIMENTO</h1>
-          <p class="banner__description">
-            Conheça o nosso site, aqui você pode encontrar os carros das melhores marcas e a peça ideal para o seu carro, 
-            pelo melhor custo benefício do mercado.
-          </p>
-          <a href="/pages/services/servicos.html" class="btn">Ver Serviços</a>
-        </div>
-      </section>
-    </main>
-
-    <!-- WHATSAPP FLOAT -->
-    <a 
-      href="https://wa.me/5511984039699" 
-      class="whatsapp-float" 
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Fale conosco pelo WhatsApp"
-    >
-      <img 
-        src="/public/images/whatsapp.png" 
-        alt="Ícone WhatsApp" 
-        class="whatsapp-float__icon"
-        width="60"
-        height="60"
-      />
+<body class="au-body">
+  <!-- ══════════════════════════════════════════════════════
+         HEADER STICKY
+         au-header         → posição fixed + transição ao scroll
+         au-logo           → flex alinhado com gap
+         au-nav            → lista de links
+         au-nav__link      → link com hover e estado ativo
+         au-btn au-btn--solid → CTA de destaque
+    ══════════════════════════════════════════════════════ -->
+  <header class="au-header" role="banner">
+    <a href="/index.html" class="au-logo" aria-label="Vortex Motors - Página inicial">
+      <img src="/img/LOGO.png" alt="Logo Vortex Motors" width="160" height="auto" />
     </a>
 
-    <!-- FOOTER -->
-    <footer class="footer" role="contentinfo">
-      <p>&copy; Todos os direitos reservados.</p>
-    </footer>
-  </body>
+    <nav role="navigation" aria-label="Menu principal">
+      <ul class="au-nav">
+        <li><a href="/index.html" class="au-nav__link au-nav__link--active" aria-current="page">Home</a></li>
+        <li><a href="/pages/about/sobre.html" class="au-nav__link">Sobre</a></li>
+        <li><a href="/pages/equipe/equipe.html" class="au-nav__link">Equipe</a></li>
+        <li><a href="/pages/auth/login.html" class="au-nav__link">Login</a></li>
+        <li><a href="/pages/contact/contato.html" class="au-nav__link">Contato</a></li>
+      </ul></nav>
+
+    <a href="/pages/services/servicos.html" class="au-btn au-btn--solid au-btn--sm">Ver Serviços</a>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════
+         MAIN
+    ══════════════════════════════════════════════════════ -->
+  <main id="main-content">
+    <!-- ── HERO ────────────────────────────────────────────
+           au-hero          → min-height 100vh, posição relativa
+           au-hero__bg      → imagem ou vídeo de fundo (object-fit)
+           au-hero__overlay → gradiente escuro lateral
+           au-hero__content → z-index 2, conteúdo à esquerda
+           au-parallax      → efeito parallax automático no JS
+           au-reveal        → fade-in ao entrar na viewport
+      ──────────────────────────────────────────────────── -->
+    <section class="au-hero" aria-labelledby="hero-title">
+      <!--
+          IMAGEM DE FUNDO DO HERO
+          Substitua o src pelo caminho da sua imagem principal.
+          Ex: src="/public/images/hero-bg.jpg"
+        -->
+      <img class="au-hero__bg au-parallax" data-au-parallax-speed="0.3" width="1920" height="1080" />
+
+      <div class="au-hero__overlay" aria-hidden="true"></div>
+
+      <div class="au-hero__content">
+        <span class="au-reveal au-section-header__eyebrow">O Futuro em Movimento</span>
+        <h1 id="hero-title" class="au-reveal au-h1 au-reveal--d1">VORTEX<br />MOTORS</h1>
+        <p class="au-reveal au-body-text au-reveal--d2">
+          Conheça os melhores carros das marcas mais respeitadas do mercado. A
+          peça ideal para o seu veículo, pelo melhor custo-benefício.</p>
+        <div class="au-reveal au-reveal--d3" style="display: flex; gap: 16px; margin-top: 2rem; flex-wrap: wrap">
+          <a href="#veiculos" class="au-btn au-btn--ghost">Ver Veículos</a>
+          <a href="/pages/services/servicos.html" class="au-btn au-btn--solid">Ver Serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── DESTAQUES / PILARES ──────────────────────────────
+           au-section        → seção escura padrão
+           au-container      → max-width + padding lateral
+           au-section-header → bloco eyebrow + título + texto
+           au-reveal         → animação de scroll
+           au-grid-3         → grid de 3 colunas responsivo
+           au-divider--gold  → linha dourada decorativa
+      ──────────────────────────────────────────────────── -->
+    <section class="au-section" id="sobre" aria-labelledby="pilares-title">
+      <div class="au-container">
+        <div class="au-section-header au-reveal">
+          <span class="au-section-header__eyebrow">Por que a Vortex?</span>
+          <h2 id="pilares-title" class="au-section-header__title">Nossa Proposta</h2>
+          <p class="au-section-header__body">
+            Mais do que vender carros, entregamos uma experiência completa —
+            da escolha à manutenção.</p>
+        </div>
+
+        <hr class="au-divider--gold au-reveal" style="margin-bottom: 3rem" />
+
+        <div class="au-grid-3">
+          <div class="au-reveal au-reveal--d1" style="padding: 1.5rem; border: 1px solid var(--au-divider)">
+            <div class="au-h3" style="margin-bottom: 0.75rem">Estoque Premium</div>
+            <p class="au-body-text">
+              Veículos selecionados das principais montadoras, com laudo
+              técnico e garantia de procedência.</p>
+          </div>
+
+          <div class="au-reveal au-reveal--d2" style="padding: 1.5rem; border: 1px solid var(--au-divider)">
+            <div class="au-h3" style="margin-bottom: 0.75rem">Peças Originais</div>
+            <p class="au-body-text">
+              Catálogo completo de peças automotivas originais e homologadas
+              para todas as marcas.</p>
+          </div>
+
+          <div class="au-reveal au-reveal--d3" style="padding: 1.5rem; border: 1px solid var(--au-divider)">
+            <div class="au-h3" style="margin-bottom: 0.75rem">Suporte Completo</div>
+            <p class="au-body-text">
+              Equipe especializada para financiamento, seguro e acompanhamento
+              pós-venda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── VEÍCULOS À VENDA ─────────────────────────────────
+           au-section--dark  → fundo levemente mais claro (#141414)
+           au-grid-3         → grid de cards
+           au-card           → card com hover e linha dourada
+           au-card__image    → wrapper com overflow hidden + zoom
+           au-card__gold-line→ linha que cresce no hover
+           au-card__body     → padding interno
+           au-card__number   → numeração em dourado
+           au-card__name     → nome do veículo
+           au-card__sub      → subtítulo/categoria
+           au-badge--gold    → tag de destaque (ex: "Novo", "Oferta")
+           au-reveal         → animação de entrada
+      ──────────────────────────────────────────────────── -->
+    <section class="au-section--dark" id="veiculos" aria-labelledby="veiculos-title">
+      <div class="au-container">
+        <div class="au-section-header au-reveal">
+          <span class="au-section-header__eyebrow">Estoque Disponível</span>
+          <h2 id="veiculos-title" class="au-section-header__title">Veículos à Venda</h2>
+          <p class="au-section-header__body">Selecione o modelo ideal. Todos os veículos passam por inspeção completa antes da entrega.</p>
+        </div>
+
+        <hr class="au-divider--fade au-reveal" style="margin-bottom: 3rem" />
+
+        <div class="au-grid-3">
+          <!-- ── CARD 1 ─────────────────────────────────── -->
+          <article class="au-card au-reveal au-reveal--d1" aria-label="Veículo 1">
+            <div class="au-card__image">
+              <img src="/public/images/veiculos/veiculo-01.jpg" alt="Sedan executivo prata" loading="lazy" />
+            </div>
+            <div class="au-card__gold-line"></div>
+            <div class="au-card__body">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span class="au-card__number">01.</span>
+                <span class="au-badge au-badge--gold">Novo</span>
+              </div>
+              <div class="au-card__name">Sedan Executivo</div>
+              <div class="au-card__sub">2024 · Automático · 2.0 Turbo</div>
+              <hr class="au-divider" style="margin: 12px 0" />
+              <div style="display: flex;justify-content: space-between;align-items: center;">
+                <span class="au-h3" style="font-size: 16px">R$ 189.900</span>
+                <a href="/pages/veiculos/sedan-executivo.html" class="au-btn au-btn--ghost au-btn--sm">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── CARD 2 ─────────────────────────────────── -->
+          <article class="au-card au-reveal au-reveal--d2" aria-label="Veículo 2">
+            <div class="au-card__image">
+              <img src="/public/images/veiculos/veiculo-02.jpg" alt="SUV premium preto" loading="lazy" />
+            </div>
+            <div class="au-card__gold-line"></div>
+            <div class="au-card__body">
+              <div style="margin-bottom: 8px;display: flex;justify-content: space-between;align-items: center;">
+                <span class="au-card__number">02.</span>
+                <span class="au-badge au-badge--gold">Destaque</span>
+              </div>
+              <div class="au-card__name">SUV Premium</div>
+              <div class="au-card__sub">2023 · Automático · 1.6 Híbrido</div>
+              <hr class="au-divider" style="margin: 12px 0" />
+              <div style="display: flex;justify-content: space-between;align-items: center;">
+                <span class="au-h3" style="font-size: 16px">R$ 245.000</span>
+                <a href="/pages/veiculos/suv-premium.html" class="au-btn au-btn--ghost au-btn--sm">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── CARD 3 ─────────────────────────────────── -->
+          <article class="au-card au-reveal au-reveal--d3" aria-label="Veículo 3">
+            <div class="au-card__image">
+              <!--
+                  IMAGEM DO VEÍCULO 3
+                  Ex: src="/public/images/veiculos/hatch-01.jpg"
+                -->
+              <img src="/public/images/veiculos/veiculo-03.jpg" alt="Hatchback sport vermelho" loading="lazy" />
+            </div>
+            <div class="au-card__gold-line"></div>
+            <div class="au-card__body">
+              <div style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 8px;
+                  ">
+                <span class="au-card__number">03.</span>
+                <span class="au-badge au-badge--white">Seminovo</span>
+              </div>
+              <div class="au-card__name">Hatchback Sport</div>
+              <div class="au-card__sub">2022 · Manual · 1.4 Flex</div>
+              <hr class="au-divider" style="margin: 12px 0" />
+              <div style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  ">
+                <span class="au-h3" style="font-size: 16px">R$ 98.500</span>
+                <a href="/pages/veiculos/hatchback-sport.html" class="au-btn au-btn--ghost au-btn--sm">
+                  Ver Detalhes
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── CARD 4 ─────────────────────────────────── -->
+          <article class="au-card au-reveal au-reveal--d1" aria-label="Veículo 4">
+            <div class="au-card__image">
+              <!--
+                  IMAGEM DO VEÍCULO 4
+                  Ex: src="/public/images/veiculos/pickup-01.jpg"
+                -->
+              <img src="/public/images/veiculos/veiculo-04.jpg" alt="Pickup cabine dupla branca" loading="lazy" />
+            </div>
+            <div class="au-card__gold-line"></div>
+            <div class="au-card__body">
+              <div style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 8px;
+                  ">
+                <span class="au-card__number">04.</span>
+                <span class="au-badge au-badge--gold">Novo</span>
+              </div>
+              <div class="au-card__name">Pickup Cabine Dupla</div>
+              <div class="au-card__sub">2024 · Automático · 2.8 Diesel</div>
+              <hr class="au-divider" style="margin: 12px 0" />
+              <div style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  ">
+                <span class="au-h3" style="font-size: 16px">R$ 320.000</span>
+                <a href="/pages/veiculos/pickup-cabine-dupla.html" class="au-btn au-btn--ghost au-btn--sm">
+                  Ver Detalhes
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── CARD 5 ─────────────────────────────────── -->
+          <article class="au-card au-reveal au-reveal--d2" aria-label="Veículo 5">
+            <div class="au-card__image">
+              <!--
+                  IMAGEM DO VEÍCULO 5
+                  Ex: src="/public/images/veiculos/coupe-01.jpg"
+                -->
+              <img src="/public/images/veiculos/veiculo-05.jpg" alt="Coupé esportivo cinza" loading="lazy" />
+            </div>
+            <div class="au-card__gold-line"></div>
+            <div class="au-card__body">
+              <div style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 8px;
+                  ">
+                <span class="au-card__number">05.</span>
+                <span class="au-badge au-badge--gold">Destaque</span>
+              </div>
+              <div class="au-card__name">Coupé Esportivo</div>
+              <div class="au-card__sub">2023 · Automático · 3.0 V6</div>
+              <hr class="au-divider" style="margin: 12px 0" />
+              <div style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                  ">
+                <span class="au-h3" style="font-size: 16px">R$ 410.000</span>
+                <a href="/pages/veiculos/coupe-esportivo.html" class="au-btn au-btn--ghost au-btn--sm">
+                  Ver Detalhes
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── CARD 6 ─────────────────────────────────── -->
+          <article class="au-card au-reveal au-reveal--d3" aria-label="Veículo 6">
+            <div class="au-card__image">
+              <!--
+                  IMAGEM DO VEÍCULO 6
+                  Ex: src="/public/images/veiculos/eletrico-01.jpg"
+                -->
+              <img src="/public/images/veiculos/veiculo-06.jpg" alt="Elétrico compacto azul" loading="lazy" />
+            </div>
+            <div class="au-card__gold-line"></div>
+            <div class="au-card__body">
+              <div style="  display: flex;  justify-content: space-between;  align-items: center;  margin-bottom: 8px;">
+                <span class="au-card__number">06.</span>
+                <span class="au-badge au-badge--white">Elétrico</span>
+              </div>
+              <div class="au-card__name">Elétrico Compacto</div>
+              <div class="au-card__sub">
+                2024 · Automático · 100% Elétrico
+              </div>
+              <hr class="au-divider" style="margin: 12px 0" />
+              <div style="display: flex;justify-content: space-between;align-items: center;">
+                <span class="au-h3" style="font-size: 16px">R$ 178.000</span>
+                <a href="/pages/veiculos/eletrico-compacto.html" class="au-btn au-btn--ghost au-btn--sm">Ver Detalhes</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- /au-grid-3 -->
+
+        <!-- CTA ver mais -->
+        <div class="au-reveal" style="text-align: center; margin-top: 3rem">
+          <a href="/pages/veiculos/todos.html" class="au-btn au-btn--outline">Ver Todo o Estoque</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FICHA TÉCNICA / SPECS ─────────────────────────────
+           au-section        → fundo escuro padrão
+           au-grid-2         → layout 50/50 imagem + specs
+           au-specs          → lista de especificações técnicas
+           au-spec-row       → linha chave/valor com divider
+      ──────────────────────────────────────────────────── -->
+    <section class="au-section" id="specs" aria-labelledby="specs-title">
+      <div class="au-container">
+        <div style="display: grid;grid-template-columns: 1fr 1fr;gap: 4rem;align-items: center;">
+
+          <!-- Imagem destaque -->
+          <div class="au-reveal au-reveal--left">
+            <!--
+                IMAGEM DE DESTAQUE DA FICHA TÉCNICA
+                Ex: src="/public/images/veiculos/destaque-specs.jpg"
+              -->
+            <img src="/public/images/veiculos/destaque-specs.jpg" alt="Veículo em destaque — vista lateral" style="width: 100%;display: block;border: 1px solid var(--au-divider);" loading="lazy" />
+          </div>
+
+          <!-- Specs -->
+          <div class="au-reveal au-reveal--right">
+            <span class="au-section-header__eyebrow">Ficha Técnica</span>
+            <h2 id="specs-title" class="au-section-header__title" style="margin-bottom: 2rem">
+              Sedan Executivo<br />2024
+            </h2>
+
+            <div class="au-specs">
+              <div class="au-spec-row">
+                <span class="au-spec-row__key">Motor</span>
+                <span class="au-spec-row__value">2.0 Turbo Flex</span>
+              </div>
+              <div class="au-spec-row">
+                <span class="au-spec-row__key">Potência</span>
+                <span class="au-spec-row__value">245 cv @ 5.500 rpm</span>
+              </div>
+              <div class="au-spec-row">
+                <span class="au-spec-row__key">Torque</span>
+                <span class="au-spec-row__value">370 Nm @ 1.600 rpm</span>
+              </div>
+              <div class="au-spec-row">
+                <span class="au-spec-row__key">Câmbio</span>
+                <span class="au-spec-row__value">Automático 8 marchas</span>
+              </div>
+              <div class="au-spec-row">
+                <span class="au-spec-row__key">0 – 100 km/h</span>
+                <span class="au-spec-row__value">6,4 segundos</span>
+              </div>
+              <div class="au-spec-row">
+                <span class="au-spec-row__key">Vel. máxima</span>
+                <span class="au-spec-row__value">240 km/h</span>
+              </div>
+              <div class="au-spec-row">
+                <span class="au-spec-row__key">Consumo urbano</span>
+                <span class="au-spec-row__value">10,2 km/l (etanol)</span>
+              </div>
+            </div>
+
+            <a href="/pages/veiculos/sedan-executivo.html" class="au-btn au-btn--ghost" style="margin-top: 2rem">
+              Ver Veículo Completo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA CONTATO ────────────────────────────────────────
+           au-section--white → seção branca de contraste
+           au-form-group     → grupo label + input
+           au-form-label     → label estilizado
+           au-input / au-select / au-textarea → inputs do design system
+           au-btn--solid     → botão de submissão
+      ──────────────────────────────────────────────────── -->
+    <section class="au-section--white" id="contato" aria-labelledby="contato-title">
+      <div class="au-container">
+        <div style="max-width: 640px; margin: 0 auto; text-align: center">
+          <div class="au-section-header au-reveal" style="text-align: center">
+            <span class="au-section-header__eyebrow" style="color: var(--au-gold)">Fale com a Vortex</span>
+            <h2 id="contato-title" class="au-section-header__title" style="color: var(--au-black)">
+              Reservar um Veículo
+            </h2>
+            <p class="au-section-header__body" style="color: #555; margin: 0 auto">
+              Preencha os dados abaixo e nossa equipe entra em contato em até
+              24 horas.
+            </p>
+          </div>
+
+          <form action="/pages/contact/contato.html" method="POST" novalidate style="display: flex;flex-direction: column;gap: 16px;margin-top: 2rem;text-align: left;">
+            <div class="au-form-group au-reveal au-reveal--d1">
+              <label for="nome" class="au-form-label" style="color: #888">Nome completo</label>
+              <input type="text" id="nome" name="nome" class="au-input" placeholder="Seu nome" required
+                autocomplete="name" style="background: #f5f5f5;color: #0a0a0a;border-color: #ddd;"/>
+            </div>
+
+            <div class="au-form-group au-reveal au-reveal--d2">
+              <label for="email" class="au-form-label" style="color: #888">E-mail</label>
+              <input type="email" id="email" name="email" class="au-input" placeholder="seuemail@exemplo.com" required
+                autocomplete="email" style="background: #f5f5f5;color: #0a0a0a;border-color: #ddd;"/>
+            </div>
+
+            <div class="au-form-group au-reveal au-reveal--d3">
+              <label for="veiculo" class="au-form-label" style="color: #888">Veículo de interesse</label>
+              <select id="veiculo" name="veiculo" class="au-select" style="background: #f5f5f5;color: #0a0a0a; border-color: #ddd;">
+
+                <option value="">Selecione um modelo</option>
+                <option value="sedan">Sedan Executivo 2024</option>
+                <option value="suv">SUV Premium 2023</option>
+                <option value="hatch">Hatchback Sport 2022</option>
+                <option value="pickup">Pickup Cabine Dupla 2024</option>
+                <option value="coupe">Coupé Esportivo 2023</option>
+                <option value="eletrico">Elétrico Compacto 2024</option>
+              </select>
+            </div>
+
+            <div class="au-form-group au-reveal au-reveal--d4">
+              <label for="mensagem" class="au-form-label" style="color: #888">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" class="au-textarea"
+                placeholder="Informações adicionais, forma de pagamento, etc." rows="4" style="background: #f5f5f5;color: #0a0a0a;border-color: #ddd;"></textarea>
+            </div>
+
+            <div class="au-reveal au-reveal--d5" style="text-align: center; margin-top: 0.5rem">
+              <button type="submit" class="au-btn au-btn--solid">Enviar Solicitação</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- /main -->
+
+  <!-- ══════════════════════════════════════════════════════
+         FOOTER
+         au-footer           → fundo #111 + border-top
+         au-footer__grid     → colunas de links
+         au-footer__heading  → título de coluna
+         au-footer__link     → link com hover
+         au-footer__bottom   → linha inferior copyright
+    ══════════════════════════════════════════════════════ -->
+  <footer class="au-footer" role="contentinfo">
+    <div class="au-container">
+      <div class="au-footer__grid">
+        <div>
+          <p class="au-footer__heading">Vortex Motors</p>
+          <a href="/index.html" class="au-footer__link">Home</a>
+          <a href="/pages/about/sobre.html" class="au-footer__link">Sobre</a>
+          <a href="/pages/equipe/equipe.html" class="au-footer__link">Equipe</a>
+        </div>
+
+        <div>
+          <p class="au-footer__heading">Serviços</p>
+          <a href="/pages/services/servicos.html" class="au-footer__link">Serviços</a>
+          <a href="#veiculos" class="au-footer__link">Veículos à Venda</a>
+          <a href="/pages/veiculos/todos.html" class="au-footer__link">Todo o Estoque</a>
+        </div>
+
+        <div>
+          <p class="au-footer__heading">Contato</p>
+          <a href="/pages/contact/contato.html" class="au-footer__link">Fale Conosco</a>
+          <a href="https://wa.me/5511984039699" target="_blank" rel="noopener noreferrer"
+            class="au-footer__link">WhatsApp</a>
+          <a href="/pages/auth/login.html" class="au-footer__link">Área do Cliente</a>
+        </div>
+
+        <div>
+          <p class="au-footer__heading">Legal</p>
+          <a href="#" class="au-footer__link">Termos de Uso</a>
+          <a href="#" class="au-footer__link">Privacidade</a>
+        </div>
+      </div>
+
+      <div class="au-footer__bottom">
+        <span class="au-caption">&copy; 2024 Vortex Motors. Todos os direitos reservados.</span>
+        <span class="au-caption au-text--muted">O futuro em movimento.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Aurora JS — deve ficar no final do body -->
+  <script src="/public/js/aurora.js"></script>
+
+  <!-- Seus scripts locais -->
+  <script src="/public/js/main.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vortex Motors - Estoque completo de veículos novos e seminovos." />
+  <title>VORTEX MOTORS - Veículos</title>
+
+  <link rel="stylesheet" href="/public/css/aurora.css" />
+  <link rel="stylesheet" href="/public/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/public/images/LOGO.png" />
+
+</head>
+
+<body class="au-body">
+
+  <!-- ══════════════════════════════════════════════════════
+       HEADER
+       Igual ao padrão do projeto. Troque au-nav__link--active
+       para a página atual caso reutilize este header.
+  ══════════════════════════════════════════════════════ -->
+  <header class="au-header" role="banner">
+    <a href="/index.html" class="au-logo" aria-label="Vortex Motors - Página inicial">
+      <img src="/img/LOGO.png" alt="Logo Vortex Motors" width="160" height="auto" />
+    </a>
+
+    <nav role="navigation" aria-label="Menu principal">
+      <ul class="au-nav">
+        <li><a href="/index.html"                     class="au-nav__link">Home</a></li>
+        <li><a href="/pages/about/sobre.html"         class="au-nav__link">Sobre</a></li>
+        <li><a href="/pages/equipe/equipe.html"       class="au-nav__link">Equipe</a></li>
+        <li><a href="/pages/auth/login.html"          class="au-nav__link">Login</a></li>
+        <li><a href="/pages/contact/contato.html"     class="au-nav__link">Contato</a></li>
+      </ul>
+    </nav>
+
+    <a href="/pages/contact/contato.html" class="au-btn au-btn--solid au-btn--sm">
+      Fale Conosco
+    </a>
+  </header>
+
+
+  <main id="main-content">
+
+    <!-- ══════════════════════════════════════════════════════
+         HERO COMPACTO DA PÁGINA
+    ══════════════════════════════════════════════════════ -->
+    <section
+      class="au-section"
+      style="padding-top:9rem; padding-bottom:4rem; border-bottom:1px solid var(--au-divider);"
+      aria-labelledby="veiculos-title"
+    >
+      <div class="au-container">
+        <span class="au-reveal au-section-header__eyebrow">Estoque Disponível</span>
+        <h1 id="veiculos-title" class="au-reveal au-h1 au-reveal--d1">
+          Veículos à Venda
+        </h1>
+        <p class="au-reveal au-body-text au-reveal--d2">
+          Todos os veículos passam por inspeção completa de 120 pontos antes da entrega.
+          Financiamento em até 60x e troca avaliada na hora.
+        </p>
+
+        <!-- Estatísticas rápidas -->
+        <div class="au-reveal au-reveal--d3" style="display:flex; gap:2rem; margin-top:2.5rem; flex-wrap:wrap;">
+          <div>
+            <div class="au-h2" style="font-size:28px; color:var(--au-gold);">47</div>
+            <div class="au-label">Veículos em estoque</div>
+          </div>
+          <div style="width:1px; background:var(--au-divider);"></div>
+          <div>
+            <div class="au-h2" style="font-size:28px;">12</div>
+            <div class="au-label">Marcas disponíveis</div>
+          </div>
+          <div style="width:1px; background:var(--au-divider);"></div>
+          <div>
+            <div class="au-h2" style="font-size:28px;">100%</div>
+            <div class="au-label">Laudos verificados</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         FILTROS
+         Os selects são .au-select com .au-form-group/.au-form-label.
+         Adapte as opções conforme o seu banco de dados.
+    ══════════════════════════════════════════════════════ -->
+    <section class="au-section" style="padding-top:3rem; padding-bottom:0;">
+      <div class="au-container">
+        <div class="filters-bar au-reveal">
+
+          <!-- Filtro: Categoria -->
+          <div class="au-form-group">
+            <label for="filtro-categoria" class="au-form-label">Categoria</label>
+            <select id="filtro-categoria" class="au-select">
+              <option value="">Todas</option>
+              <option value="sedan">Sedan</option>
+              <option value="suv">SUV</option>
+              <option value="hatch">Hatchback</option>
+              <option value="pickup">Pickup</option>
+              <option value="coupe">Coupé</option>
+              <option value="eletrico">Elétrico</option>
+            </select>
+          </div>
+
+          <!-- Filtro: Marca -->
+          <div class="au-form-group">
+            <label for="filtro-marca" class="au-form-label">Marca</label>
+            <select id="filtro-marca" class="au-select">
+              <option value="">Todas</option>
+              <option value="toyota">Toyota</option>
+              <option value="honda">Honda</option>
+              <option value="bmw">BMW</option>
+              <option value="mercedes">Mercedes-Benz</option>
+              <option value="volkswagen">Volkswagen</option>
+              <option value="chevrolet">Chevrolet</option>
+            </select>
+          </div>
+
+          <!-- Filtro: Ano -->
+          <div class="au-form-group">
+            <label for="filtro-ano" class="au-form-label">Ano</label>
+            <select id="filtro-ano" class="au-select">
+              <option value="">Todos</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+            </select>
+          </div>
+
+          <!-- Filtro: Preço -->
+          <div class="au-form-group">
+            <label for="filtro-preco" class="au-form-label">Faixa de Preço</label>
+            <select id="filtro-preco" class="au-select">
+              <option value="">Qualquer</option>
+              <option value="0-100">Até R$ 100.000</option>
+              <option value="100-200">R$ 100k – R$ 200k</option>
+              <option value="200-350">R$ 200k – R$ 350k</option>
+              <option value="350+">Acima de R$ 350k</option>
+            </select>
+          </div>
+
+          <!-- Filtro: Ordenar -->
+          <div class="au-form-group">
+            <label for="filtro-ordem" class="au-form-label">Ordenar por</label>
+            <select id="filtro-ordem" class="au-select">
+              <option value="recente">Mais recente</option>
+              <option value="menor-preco">Menor preço</option>
+              <option value="maior-preco">Maior preço</option>
+              <option value="km">Menor km</option>
+            </select>
+          </div>
+
+          <button class="au-btn au-btn--ghost">Buscar</button>
+
+        </div><!-- /filters-bar -->
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         GRID DE VEÍCULOS
+         ─────────────────────────────────────────────────────
+         COMO ADICIONAR UM NOVO VEÍCULO:
+         1. Copie o bloco entre os comentários
+            "── INÍCIO DO CARD ──" e "── FIM DO CARD ──"
+         2. Cole após o último card existente, dentro de .au-grid-3
+         3. Preencha:
+            · src da imagem
+            · au-badge--gold / au-badge--white (Novo/Seminovo/Elétrico)
+            · .vehicle-card__name    → nome do modelo
+            · .vehicle-card__meta    → "ANO · CÂMBIO · MOTOR"
+            · spec: Potência / KM rodados / Cor
+            · .vehicle-card__price   → preço formatado
+            · href dos botões        → página de detalhe + WhatsApp
+         ─────────────────────────────────────────────────────
+         DICA: Mantenha o padrão de delay:
+           Linha 1: d1 / d2 / d3
+           Linha 2: d1 / d2 / d3  (reinicia a cada linha)
+    ══════════════════════════════════════════════════════ -->
+    <section class="au-section" id="estoque" aria-labelledby="estoque-label">
+      <div class="au-container">
+
+        <p class="results-count" aria-live="polite">
+          Exibindo <span>9</span> de <span>47</span> veículos
+        </p>
+
+        <div class="au-grid-3" id="vehicle-grid">
+
+          <!-- ── INÍCIO DO CARD ────────────────────────────
+               MODELO: Sedan Executivo
+          ─────────────────────────────────────────────── -->
+          <article class="vehicle-card au-reveal au-reveal--d1" aria-label="Sedan Executivo 2024">
+
+            <div class="au-card__image">
+              <!-- Substitua pelo caminho da imagem do veículo -->
+              <!-- Ex: src="/public/images/veiculos/sedan-executivo.jpg" -->
+              <img
+                src="/public/images/veiculos/sedan-executivo.jpg"
+                alt="Sedan Executivo prata 2024 — vista frontal"
+                loading="lazy"
+              />
+            </div>
+            <div class="au-card__gold-line"></div>
+
+            <div class="vehicle-card__body">
+              <div class="vehicle-card__tags">
+                <span class="au-badge au-badge--gold">Novo</span>
+              </div>
+              <div class="vehicle-card__name">Sedan Executivo</div>
+              <div class="vehicle-card__meta">2024 · Automático · 2.0 Turbo</div>
+
+              <div class="vehicle-card__specs">
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Potência</span>
+                  <span class="vehicle-card__spec-value">245 cv</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">KM</span>
+                  <span class="vehicle-card__spec-value">0 km</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Cor</span>
+                  <span class="vehicle-card__spec-value">Prata</span>
+                </div>
+              </div>
+
+              <div class="vehicle-card__price">
+                <span class="vehicle-card__price-label">Preço</span>
+                R$ 189.900
+              </div>
+
+              <div class="vehicle-card__actions">
+                <a href="/pages/veiculos/sedan-executivo.html" class="au-btn au-btn--ghost">Ver Detalhes</a>
+                <a href="https://wa.me/5511984039699?text=Tenho interesse no Sedan Executivo 2024" class="au-btn au-btn--solid" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+          <!-- ── FIM DO CARD ──────────────────────────── -->
+
+
+          <!-- ── INÍCIO DO CARD ────────────────────────────
+               MODELO: SUV Premium
+          ─────────────────────────────────────────────── -->
+          <article class="vehicle-card au-reveal au-reveal--d2" aria-label="SUV Premium 2023">
+
+            <div class="au-card__image">
+              <!-- Ex: src="/public/images/veiculos/suv-premium.jpg" -->
+              <img
+                src="/public/images/veiculos/suv-premium.jpg"
+                alt="SUV Premium preto 2023 — vista lateral"
+                loading="lazy"
+              />
+            </div>
+            <div class="au-card__gold-line"></div>
+
+            <div class="vehicle-card__body">
+              <div class="vehicle-card__tags">
+                <span class="au-badge au-badge--gold">Destaque</span>
+              </div>
+              <div class="vehicle-card__name">SUV Premium</div>
+              <div class="vehicle-card__meta">2023 · Automático · 1.6 Híbrido</div>
+
+              <div class="vehicle-card__specs">
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Potência</span>
+                  <span class="vehicle-card__spec-value">180 cv</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">KM</span>
+                  <span class="vehicle-card__spec-value">12.400</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Cor</span>
+                  <span class="vehicle-card__spec-value">Preto</span>
+                </div>
+              </div>
+
+              <div class="vehicle-card__price">
+                <span class="vehicle-card__price-label">Preço</span>
+                R$ 245.000
+              </div>
+
+              <div class="vehicle-card__actions">
+                <a href="/pages/veiculos/suv-premium.html" class="au-btn au-btn--ghost">Ver Detalhes</a>
+                <a href="https://wa.me/5511984039699?text=Tenho interesse no SUV Premium 2023" class="au-btn au-btn--solid" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+          <!-- ── FIM DO CARD ──────────────────────────── -->
+
+
+          <!-- ── INÍCIO DO CARD ────────────────────────────
+               MODELO: Hatchback Sport
+          ─────────────────────────────────────────────── -->
+          <article class="vehicle-card au-reveal au-reveal--d3" aria-label="Hatchback Sport 2022">
+
+            <div class="au-card__image">
+              <!-- Ex: src="/public/images/veiculos/hatchback-sport.jpg" -->
+              <img
+                src="/public/images/veiculos/hatchback-sport.jpg"
+                alt="Hatchback Sport vermelho 2022"
+                loading="lazy"
+              />
+            </div>
+            <div class="au-card__gold-line"></div>
+
+            <div class="vehicle-card__body">
+              <div class="vehicle-card__tags">
+                <span class="au-badge au-badge--white">Seminovo</span>
+              </div>
+              <div class="vehicle-card__name">Hatchback Sport</div>
+              <div class="vehicle-card__meta">2022 · Manual · 1.4 Flex</div>
+
+              <div class="vehicle-card__specs">
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Potência</span>
+                  <span class="vehicle-card__spec-value">107 cv</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">KM</span>
+                  <span class="vehicle-card__spec-value">38.200</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Cor</span>
+                  <span class="vehicle-card__spec-value">Vermelho</span>
+                </div>
+              </div>
+
+              <div class="vehicle-card__price">
+                <span class="vehicle-card__price-label">Preço</span>
+                R$ 98.500
+              </div>
+
+              <div class="vehicle-card__actions">
+                <a href="/pages/veiculos/hatchback-sport.html" class="au-btn au-btn--ghost">Ver Detalhes</a>
+                <a href="https://wa.me/5511984039699?text=Tenho interesse no Hatchback Sport 2022" class="au-btn au-btn--solid" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+          <!-- ── FIM DO CARD ──────────────────────────── -->
+
+
+          <!-- ── INÍCIO DO CARD ────────────────────────────
+               MODELO: Pickup Cabine Dupla
+          ─────────────────────────────────────────────── -->
+          <article class="vehicle-card au-reveal au-reveal--d1" aria-label="Pickup Cabine Dupla 2024">
+
+            <div class="au-card__image">
+              <!-- Ex: src="/public/images/veiculos/pickup-cabine-dupla.jpg" -->
+              <img
+                src="/public/images/veiculos/pickup-cabine-dupla.jpg"
+                alt="Pickup Cabine Dupla branca 2024"
+                loading="lazy"
+              />
+            </div>
+            <div class="au-card__gold-line"></div>
+
+            <div class="vehicle-card__body">
+              <div class="vehicle-card__tags">
+                <span class="au-badge au-badge--gold">Novo</span>
+              </div>
+              <div class="vehicle-card__name">Pickup Cabine Dupla</div>
+              <div class="vehicle-card__meta">2024 · Automático · 2.8 Diesel</div>
+
+              <div class="vehicle-card__specs">
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Potência</span>
+                  <span class="vehicle-card__spec-value">204 cv</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">KM</span>
+                  <span class="vehicle-card__spec-value">0 km</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Cor</span>
+                  <span class="vehicle-card__spec-value">Branco</span>
+                </div>
+              </div>
+
+              <div class="vehicle-card__price">
+                <span class="vehicle-card__price-label">Preço</span>
+                R$ 320.000
+              </div>
+
+              <div class="vehicle-card__actions">
+                <a href="/pages/veiculos/pickup-cabine-dupla.html" class="au-btn au-btn--ghost">Ver Detalhes</a>
+                <a href="https://wa.me/5511984039699?text=Tenho interesse na Pickup Cabine Dupla 2024" class="au-btn au-btn--solid" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+          <!-- ── FIM DO CARD ──────────────────────────── -->
+
+
+          <!-- ── INÍCIO DO CARD ────────────────────────────
+               MODELO: Coupé Esportivo
+          ─────────────────────────────────────────────── -->
+          <article class="vehicle-card au-reveal au-reveal--d2" aria-label="Coupé Esportivo 2023">
+
+            <div class="au-card__image">
+              <!-- Ex: src="/public/images/veiculos/coupe-esportivo.jpg" -->
+              <img
+                src="/public/images/veiculos/coupe-esportivo.jpg"
+                alt="Coupé Esportivo cinza 2023"
+                loading="lazy"
+              />
+            </div>
+            <div class="au-card__gold-line"></div>
+
+            <div class="vehicle-card__body">
+              <div class="vehicle-card__tags">
+                <span class="au-badge au-badge--gold">Destaque</span>
+                <span class="au-badge au-badge--white">V6</span>
+              </div>
+              <div class="vehicle-card__name">Coupé Esportivo</div>
+              <div class="vehicle-card__meta">2023 · Automático · 3.0 V6</div>
+
+              <div class="vehicle-card__specs">
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Potência</span>
+                  <span class="vehicle-card__spec-value">380 cv</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">KM</span>
+                  <span class="vehicle-card__spec-value">8.700</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Cor</span>
+                  <span class="vehicle-card__spec-value">Cinza</span>
+                </div>
+              </div>
+
+              <div class="vehicle-card__price">
+                <span class="vehicle-card__price-label">Preço</span>
+                R$ 410.000
+              </div>
+
+              <div class="vehicle-card__actions">
+                <a href="/pages/veiculos/coupe-esportivo.html" class="au-btn au-btn--ghost">Ver Detalhes</a>
+                <a href="https://wa.me/5511984039699?text=Tenho interesse no Coupé Esportivo 2023" class="au-btn au-btn--solid" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+          <!-- ── FIM DO CARD ──────────────────────────── -->
+
+
+          <!-- ── INÍCIO DO CARD ────────────────────────────
+               MODELO: Elétrico Compacto
+          ─────────────────────────────────────────────── -->
+          <article class="vehicle-card au-reveal au-reveal--d3" aria-label="Elétrico Compacto 2024">
+
+            <div class="au-card__image">
+              <!-- Ex: src="/public/images/veiculos/eletrico-compacto.jpg" -->
+              <img
+                src="/public/images/veiculos/eletrico-compacto.jpg"
+                alt="Elétrico Compacto azul 2024"
+                loading="lazy"
+              />
+            </div>
+            <div class="au-card__gold-line"></div>
+
+            <div class="vehicle-card__body">
+              <div class="vehicle-card__tags">
+                <span class="au-badge au-badge--gold">Elétrico</span>
+              </div>
+              <div class="vehicle-card__name">Elétrico Compacto</div>
+              <div class="vehicle-card__meta">2024 · Automático · 100% Elétrico</div>
+
+              <div class="vehicle-card__specs">
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Autonomia</span>
+                  <span class="vehicle-card__spec-value">480 km</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">KM</span>
+                  <span class="vehicle-card__spec-value">0 km</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Cor</span>
+                  <span class="vehicle-card__spec-value">Azul</span>
+                </div>
+              </div>
+
+              <div class="vehicle-card__price">
+                <span class="vehicle-card__price-label">Preço</span>
+                R$ 178.000
+              </div>
+
+              <div class="vehicle-card__actions">
+                <a href="/pages/veiculos/eletrico-compacto.html" class="au-btn au-btn--ghost">Ver Detalhes</a>
+                <a href="https://wa.me/5511984039699?text=Tenho interesse no Elétrico Compacto 2024" class="au-btn au-btn--solid" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+          <!-- ── FIM DO CARD ──────────────────────────── -->
+
+
+          <!-- ── INÍCIO DO CARD ────────────────────────────
+               MODELO: Minivan Familiar
+          ─────────────────────────────────────────────── -->
+          <article class="vehicle-card au-reveal au-reveal--d1" aria-label="Minivan Familiar 2023">
+
+            <div class="au-card__image">
+              <!-- Ex: src="/public/images/veiculos/minivan-familiar.jpg" -->
+              <img
+                src="/public/images/veiculos/minivan-familiar.jpg"
+                alt="Minivan Familiar grafite 2023"
+                loading="lazy"
+              />
+            </div>
+            <div class="au-card__gold-line"></div>
+
+            <div class="vehicle-card__body">
+              <div class="vehicle-card__tags">
+                <span class="au-badge au-badge--white">Seminovo</span>
+              </div>
+              <div class="vehicle-card__name">Minivan Familiar</div>
+              <div class="vehicle-card__meta">2023 · Automático · 2.5 Flex</div>
+
+              <div class="vehicle-card__specs">
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Potência</span>
+                  <span class="vehicle-card__spec-value">175 cv</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">KM</span>
+                  <span class="vehicle-card__spec-value">22.900</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Cor</span>
+                  <span class="vehicle-card__spec-value">Grafite</span>
+                </div>
+              </div>
+
+              <div class="vehicle-card__price">
+                <span class="vehicle-card__price-label">Preço</span>
+                R$ 165.000
+              </div>
+
+              <div class="vehicle-card__actions">
+                <a href="/pages/veiculos/minivan-familiar.html" class="au-btn au-btn--ghost">Ver Detalhes</a>
+                <a href="https://wa.me/5511984039699?text=Tenho interesse na Minivan Familiar 2023" class="au-btn au-btn--solid" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+          <!-- ── FIM DO CARD ──────────────────────────── -->
+
+
+          <!-- ── INÍCIO DO CARD ────────────────────────────
+               MODELO: Roadster Conversível
+          ─────────────────────────────────────────────── -->
+          <article class="vehicle-card au-reveal au-reveal--d2" aria-label="Roadster Conversível 2024">
+
+            <div class="au-card__image">
+              <!-- Ex: src="/public/images/veiculos/roadster-conversivel.jpg" -->
+              <img
+                src="/public/images/veiculos/roadster-conversivel.jpg"
+                alt="Roadster Conversível amarelo 2024"
+                loading="lazy"
+              />
+            </div>
+            <div class="au-card__gold-line"></div>
+
+            <div class="vehicle-card__body">
+              <div class="vehicle-card__tags">
+                <span class="au-badge au-badge--gold">Novo</span>
+                <span class="au-badge au-badge--white">Limitado</span>
+              </div>
+              <div class="vehicle-card__name">Roadster Conversível</div>
+              <div class="vehicle-card__meta">2024 · Automático · 2.0 Turbo</div>
+
+              <div class="vehicle-card__specs">
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Potência</span>
+                  <span class="vehicle-card__spec-value">310 cv</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">KM</span>
+                  <span class="vehicle-card__spec-value">0 km</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Cor</span>
+                  <span class="vehicle-card__spec-value">Amarelo</span>
+                </div>
+              </div>
+
+              <div class="vehicle-card__price">
+                <span class="vehicle-card__price-label">Preço</span>
+                R$ 390.000
+              </div>
+
+              <div class="vehicle-card__actions">
+                <a href="/pages/veiculos/roadster-conversivel.html" class="au-btn au-btn--ghost">Ver Detalhes</a>
+                <a href="https://wa.me/5511984039699?text=Tenho interesse no Roadster Conversível 2024" class="au-btn au-btn--solid" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+          <!-- ── FIM DO CARD ──────────────────────────── -->
+
+
+          <!-- ── INÍCIO DO CARD ────────────────────────────
+               MODELO: SUV Compacto
+          ─────────────────────────────────────────────── -->
+          <article class="vehicle-card au-reveal au-reveal--d3" aria-label="SUV Compacto 2022">
+
+            <div class="au-card__image">
+              <!-- Ex: src="/public/images/veiculos/suv-compacto.jpg" -->
+              <img
+                src="/public/images/veiculos/suv-compacto.jpg"
+                alt="SUV Compacto verde oliva 2022"
+                loading="lazy"
+              />
+            </div>
+            <div class="au-card__gold-line"></div>
+
+            <div class="vehicle-card__body">
+              <div class="vehicle-card__tags">
+                <span class="au-badge au-badge--white">Seminovo</span>
+              </div>
+              <div class="vehicle-card__name">SUV Compacto</div>
+              <div class="vehicle-card__meta">2022 · Automático · 1.0 Turbo</div>
+
+              <div class="vehicle-card__specs">
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Potência</span>
+                  <span class="vehicle-card__spec-value">130 cv</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">KM</span>
+                  <span class="vehicle-card__spec-value">51.300</span>
+                </div>
+                <div class="vehicle-card__spec-item">
+                  <span class="vehicle-card__spec-label">Cor</span>
+                  <span class="vehicle-card__spec-value">Verde Oliva</span>
+                </div>
+              </div>
+
+              <div class="vehicle-card__price">
+                <span class="vehicle-card__price-label">Preço</span>
+                R$ 112.000
+              </div>
+
+              <div class="vehicle-card__actions">
+                <a href="/pages/veiculos/suv-compacto.html" class="au-btn au-btn--ghost">Ver Detalhes</a>
+                <a href="https://wa.me/5511984039699?text=Tenho interesse no SUV Compacto 2022" class="au-btn au-btn--solid" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+            </div>
+
+          </article>
+          <!-- ── FIM DO CARD ──────────────────────────── -->
+
+          <!--
+            ══════════════════════════════════════════════
+            ADICIONE NOVOS CARDS AQUI
+            Copie qualquer bloco acima (entre INÍCIO e FIM)
+            e cole neste espaço. Lembre de alternar
+            au-reveal--d1 / d2 / d3 a cada linha de 3 cards.
+            ══════════════════════════════════════════════
+          -->
+
+        </div><!-- /au-grid-3 -->
+
+
+        <!-- Paginação -->
+        <nav class="pagination au-reveal" aria-label="Paginação do estoque">
+          <button class="pagination__btn" aria-label="Página anterior">&#10094;</button>
+          <button class="pagination__btn pagination__btn--active" aria-current="page">1</button>
+          <button class="pagination__btn">2</button>
+          <button class="pagination__btn">3</button>
+          <button class="pagination__btn">4</button>
+          <button class="pagination__btn">5</button>
+          <button class="pagination__btn" aria-label="Próxima página">&#10095;</button>
+        </nav>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         BANNER CTA — FINANCIAMENTO
+    ══════════════════════════════════════════════════════ -->
+    <section
+      class="au-section--white"
+      style="text-align:center;"
+      aria-labelledby="financiamento-title"
+    >
+      <div class="au-container">
+        <div class="au-reveal">
+          <span class="au-section-header__eyebrow" style="color:var(--au-gold);">Sem burocracia</span>
+          <h2 id="financiamento-title" class="au-section-header__title" style="color:var(--au-black); margin:0.5rem auto 1rem;">
+            Financiamento em até 60x
+          </h2>
+          <p class="au-body-text" style="color:#555; margin:0 auto 2rem; text-align:center;">
+            Aprovação em minutos. Entrada a partir de 10%. Aceite de veículo como parte do pagamento.
+          </p>
+          <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+            <a href="/pages/contact/contato.html" class="au-btn au-btn--solid">Simular Financiamento</a>
+            <a href="https://wa.me/5511984039699" class="au-btn au-btn--ghost" target="_blank" rel="noopener noreferrer">Falar com Consultor</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- WhatsApp Float -->
+  <a
+    href="https://wa.me/5511984039699"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Fale conosco pelo WhatsApp"
+    data-au-cursor-hover
+  >
+    <img src="/img/whatsapp.png" alt="Ícone WhatsApp" class="whatsapp-float__icon" width="60" height="60" />
+  </a>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer class="au-footer" role="contentinfo">
+    <div class="au-container">
+      <div class="au-footer__grid">
+        <div>
+          <p class="au-footer__heading">Vortex Motors</p>
+          <a href="/index.html"                    class="au-footer__link">Home</a>
+          <a href="/pages/about/sobre.html"        class="au-footer__link">Sobre</a>
+          <a href="/pages/equipe/equipe.html"      class="au-footer__link">Equipe</a>
+        </div>
+        <div>
+          <p class="au-footer__heading">Estoque</p>
+          <a href="/pages/veiculos/veiculos.html"  class="au-footer__link">Veículos</a>
+          <a href="/pages/pecas/pecas.html"        class="au-footer__link">Peças</a>
+          <a href="/pages/carregamento/carregamento.html" class="au-footer__link">Ponto de Carregamento</a>
+        </div>
+        <div>
+          <p class="au-footer__heading">Atendimento</p>
+          <a href="/pages/contact/contato.html"    class="au-footer__link">Fale Conosco</a>
+          <a href="https://wa.me/5511984039699" target="_blank" rel="noopener noreferrer" class="au-footer__link">WhatsApp</a>
+          <a href="/pages/auth/login.html"         class="au-footer__link">Área do Cliente</a>
+        </div>
+        <div>
+          <p class="au-footer__heading">Legal</p>
+          <a href="#" class="au-footer__link">Termos de Uso</a>
+          <a href="#" class="au-footer__link">Privacidade</a>
+        </div>
+      </div>
+      <div class="au-footer__bottom">
+        <span class="au-caption">&copy; 2024 Vortex Motors. Todos os direitos reservados.</span>
+        <span class="au-caption au-text--muted">O futuro em movimento.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/public/js/aurora.js"></script>
+  <script src="/public/js/main.js"></script>
+
+</body>
+</html>
