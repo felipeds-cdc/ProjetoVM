@@ -1,0 +1,169 @@
+[
+  {
+    "id": 1,
+    "marca": "BYD",
+    "nome": "SUV Premium",
+    "status": "Novo",
+    "km": 200,
+    "badge": "Novo",
+    "cor": "Preto",
+    "potencia": 180,
+    "ano": 2025,
+    "transmissao": "Automático",
+    "motor": "2.0 Turbo",
+    "preco": 300000,
+    "imagem": "/img/veiculo2/model3.jpeg"
+  },
+  {
+    "id": 2,
+    "marca": "Tesla",
+    "modelo": "Model S",
+    "ano": 2025,
+    "preco": 700000,
+    "imagem": "/img/veiculo2/modelS.jpeg"
+  },
+  {
+    "id": 3,
+    "marca": "Tesla",
+    "modelo": "Cybertruck",
+    "ano": 2025,
+    "preco": 500000,
+    "imagem": "/img/veiculo2/Cybertruck.jpeg"
+  },
+  {
+    "id": 4,
+    "marca": "Renault",
+    "modelo": "Kangoo e-Tech",
+    "ano": 2026,
+    "preco": 250000,
+    "imagem": "/img/veiculo2/kangoo.jpeg"
+  },
+  {
+    "id": 5,
+    "marca": "BYD",
+    "modelo": "Dolphin Mini",
+    "ano": 2026,
+    "preco": 118000,
+    "imagem": "/img/veiculo2/Dolphin.jpeg"
+  },
+  {
+    "id": 6,
+    "marca": "BYD",
+    "modelo": "Hav EV",
+    "ano": 2025,
+    "preco": 300000,
+    "imagem": "han.jpeg"
+  },
+  {
+    "id": 7,
+    "marca": "Tesla",
+    "modelo": "Model Y",
+    "ano": 2025,
+    "preco": 300000,
+    "imagem": "modely.jpeg"
+  },
+  {
+    "id": 8,
+    "marca": "Renault",
+    "modelo": "Zoe E-Tech",
+    "ano": 2026,
+    "preco": 200000,
+    "imagem": "zoe.jpeg"
+  },
+  {
+    "id": 9,
+    "marca": "Renault",
+    "modelo": "Kwid E-Tech",
+    "ano": 2026,
+    "preco": 99900,
+    "imagem": "kwid.jpeg"
+  },
+  {
+    "id": 10,
+    "marca": "Renault",
+    "modelo": "Megane E-Tech",
+    "ano": 2026,
+    "preco": 280000,
+    "imagem": "megane.jpeg"
+  },
+  {
+    "id": 11,
+    "marca": "GWM Motors",
+    "modelo": "havael ev",
+    "ano": 2025,
+    "preco": 300000,
+    "imagem": "ejs1.jpeg"
+  },
+  {
+    "id": 12,
+    "marca": "BMW",
+    "modelo": "3 Series",
+    "ano": 2022,
+    "preco": 320000,
+    "imagem": "tank.jpeg"
+  },
+  {
+    "id": 13,
+    "marca": "Audi",
+    "modelo": "A4",
+    "ano": 2023,
+    "preco": 350000,
+    "imagem": "ejs4.jpeg"
+  },
+  {
+    "id": 14,
+    "marca": "Lexus",
+    "modelo": "IS",
+    "ano": 2020,
+    "preco": 280000,
+    "imagem": "ej7.jpeg"
+  },
+  {
+    "id": 15,
+    "marca": "Jaguar",
+    "modelo": "XE",
+    "ano": 2021,
+    "preco": 290000,
+    "imagem": "iev330p.jpeg"
+  },
+  {
+    "id": 16,
+    "marca": "Mercedes-Benz",
+    "modelo": "C-Class",
+    "ano": 2022,
+    "preco": 400000,
+    "imagem": "iev40.jpeg"
+  },
+  {
+    "id": 17,
+    "marca": "Volvo",
+    "modelo": "S60",
+    "ano": 2023,
+    "preco": 270000,
+    "imagem": "iev50.jpeg"
+  },
+  {
+    "id": 18,
+    "marca": "Porsche",
+    "modelo": "Panamera",
+    "ano": 2021,
+    "preco": 500000,
+    "imagem": "iev60.jpeg"
+  },
+  {
+    "id": 19,
+    "marca": "Ferrari",
+    "modelo": "Roma",
+    "ano": 2020,
+    "preco": 1500000,
+    "imagem": "iev80.jpeg"
+  },
+  {
+    "id": 20,
+    "marca": "Lamborghini",
+    "modelo": "Huracan",
+    "ano": 2022,
+    "preco": 2000000,
+    "imagem": "iev90.jpeg"
+  }
+]
