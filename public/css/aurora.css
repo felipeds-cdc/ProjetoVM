@@ -793,6 +793,102 @@
   pointer-events: all;
 }
 
+/* ================================
+   TESTIMONIAL CARD (ESTILO CHAT)
+================================ */
+
+.au-testimonial-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 1.25rem;
+  background: var(--au-black2);
+  border: 1px solid var(--au-divider);
+  transition: border-color var(--au-transition), transform var(--au-transition);
+}
+
+.au-testimonial-card:hover {
+  border-color: var(--au-gold);
+  transform: translateY(-4px);
+}
+
+/* AVATAR */
+.au-testimonial-card__avatar {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--au-black2);
+  position: relative;
+}
+
+/* glow sutil */
+.au-testimonial-card__avatar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--au-divider),
+    0 0 12px rgba(0, 200, 255, 0.15);
+}
+
+/* imagem */
+.au-testimonial-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2);
+  /* remove borda branca */
+}
+
+/* CONTEÚDO */
+.au-testimonial-card__content {
+  flex: 1;
+}
+
+/* NOME */
+.au-testimonial-card__name {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--au-white);
+  margin-bottom: 6px;
+}
+
+/* LOCAL */
+.au-testimonial-card__meta {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--au-gray);
+  margin-bottom: 10px;
+}
+
+/* BALÃO */
+.au-testimonial-card__bubble {
+  position: relative;
+  background: var(--au-gold);
+  border: 1px solid var(--au-divider);
+  padding: 12px 14px;
+  font-size: 13px;
+  color: var(--au-black);
+  line-height: 1.6;
+}
+
+/* SETA DO BALÃO */
+.au-testimonial-card__bubble::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 14px;
+  width: 12px;
+  height: 12px;
+  background: inherit;
+  border-left: 1px solid var(--au-divider);
+  border-bottom: 1px solid var(--au-divider);
+  transform: rotate(45deg);
+}
+
 /* ── Carrossel — estilos próprios sobre o Aurora ── */
 
 .team-carousel-wrapper {
