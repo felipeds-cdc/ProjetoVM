@@ -1,330 +1,371 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Conheça a história e os valores da Vortex Motors" />
-    
-    <title>VORTEX MOTORS - Sobre Nós</title>
-    
-    <link rel="stylesheet" href="/public/css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
 
-    <style>
-      /* Estilos específicos para página Sobre */
-      .sobre-hero {
-        text-align: center;
-        padding: 70px 20px 50px;
-        border-bottom: 1px solid var(--border-color);
-      }
-      
-      .sobre-hero__title {
-        font-family: var(--font-heading);
-        font-size: clamp(26px, 5vw, 50px);
-        color: var(--color-primary-dark);
-        letter-spacing: 5px;
-        text-transform: uppercase;
-      }
-      
-      .sobre-hero__subtitle {
-        color: var(--text-muted);
-        font-size: 16px;
-        letter-spacing: 2px;
-        margin-top: 10px;
-      }
-      
-      .linha-divisora {
-        width: 80px;
-        height: 3px;
-        background: var(--color-primary-dark);
-        margin: 20px auto 0;
-      }
-      
-      .sobre-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 60px 30px 100px;
-        display: flex;
-        flex-direction: column;
-        gap: 70px;
-      }
-      
-      .secao {
-        animation: fadeUp 0.7s ease both;
-      }
-      
-      .secao:nth-child(1) { animation-delay: 0.1s; }
-      .secao:nth-child(2) { animation-delay: 0.2s; }
-      .secao:nth-child(3) { animation-delay: 0.3s; }
-      .secao:nth-child(4) { animation-delay: 0.4s; }
-      
-      .secao-titulo {
-        font-family: var(--font-heading);
-        font-size: clamp(14px, 2.5vw, 18px);
-        color: var(--color-primary-dark);
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        gap: 14px;
-      }
-      
-      .secao-titulo::after {
-        content: "";
-        flex: 1;
-        height: 1px;
-        background: var(--border-color);
-      }
-      
-      .secao p {
-        color: var(--text-secondary);
-        font-size: 17px;
-        line-height: 1.8;
-      }
-      
-      .mvv-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-      }
-      
-      .mvv-card {
-        background: var(--bg-card);
-        border: 1px solid var(--border-color);
-        border-radius: 10px;
-        padding: 28px 24px;
-        flex: 1;
-        min-width: 220px;
-        transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
-      }
-      
-      .mvv-card:hover {
-        border-color: var(--color-primary-dark);
-        box-shadow: var(--shadow-glow-sm);
-      }
-      
-      .mvv-card__title {
-        font-family: var(--font-heading);
-        font-size: 13px;
-        color: var(--color-primary-dark);
-        letter-spacing: 2px;
-        margin-bottom: 14px;
-        text-transform: uppercase;
-      }
-      
-      .mvv-card p, .mvv-card ul {
-        color: var(--text-secondary);
-        font-size: 16px;
-        line-height: 1.8;
-      }
-      
-      .mvv-card ul {
-        list-style: none;
-        padding: 0;
-      }
-      
-      .mvv-card ul li::before {
-        content: "› ";
-        color: var(--color-primary-dark);
-        font-weight: bold;
-      }
-      
-      .diferenciais-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-      
-      .diferencial-item {
-        background: var(--bg-card);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        padding: 16px 22px;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        flex: 1;
-        min-width: 200px;
-        transition: border-color var(--transition-normal), transform var(--transition-normal);
-      }
-      
-      .diferencial-item:hover {
-        border-color: var(--color-primary-dark);
-        transform: translateY(-4px);
-      }
-      
-      .diferencial-icone {
-        font-size: 22px;
-      }
-      
-      .diferencial-texto {
-        color: var(--text-secondary);
-        font-size: 16px;
-        letter-spacing: 0.5px;
-      }
-      
-      .atuacao-badge {
-        display: inline-block;
-        background: var(--bg-card);
-        border: 1px solid var(--color-primary-dark);
-        border-radius: 6px;
-        padding: 12px 28px;
-        color: var(--color-primary-dark);
-        font-family: var(--font-heading);
-        font-size: 14px;
-        letter-spacing: 2px;
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vortex Motors - Conheça a equipe por trás do projeto." />
+  <title>VORTEX MOTORS - Sobre</title>
 
-  <body>
-    <!-- HEADER -->
-    <header class="header" role="banner">
-      <div class="header__logo">
-        <a href="/index.html" aria-label="Vortex Motors - Página inicial">
-          <img src="/img/LOGO.png" alt="Logo Vortex Motors" width="290" height="auto" />
-        </a>
+  <!-- Aurora Design System -->
+  <link rel="stylesheet" href="/public/css/aurora.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/img/LOGO.png" />
+</head>
+
+<!-- au-body → cursor inteligente + base escura -->
+
+<body class="au-body">
+
+  <!-- ══════════ HEADER STICKY ═════════════════════════════════════ -->
+  <header class="au-header" role="banner">
+    <a href="/index.html" class="au-logo" aria-label="Vortex Motors - Página inicial">
+      <img src="/img/LOGO.png" alt="Logo Vortex Motors" width="160" height="auto" /></a>
+
+    <nav role="navigation" aria-label="Menu principal">
+      <ul class="au-nav">
+        <li><a href="/index.html" class="au-nav__link">Home</a></li>
+        <li><a href="/pages/about/sobre.html" class="au-nav__link">Sobre</a></li>
+        </li>
+        <li><a href="/pages/auth/login.html" class="au-nav__link">Login</a></li>
+        <li><a href="/pages/contact/contato.html" class="au-nav__link"></a></li>
+      </ul>
+    </nav>
+
+    <a href="/pages/contact/contato.html" class="au-btn au-btn--solid au-btn--sm">Contato</a>
+  </header>
+
+  <main id="main-content">
+    <!-- ── HERO COMPACTO ─────────────────────────────────── -->
+    <section class="au-section"
+      style="padding-top: 10rem; padding-bottom: 4rem; text-align: center; border-bottom: 1px solid var(--au-divider);"
+      aria-labelledby="equipe-title">
+
+      <div class="au-container">
+        <span class="au-reveal au-section-header__eyebrow">Vortex Motors</span>
+        <h1 id="equipe-title" class="au-reveal au-h1 au-reveal--d1" style="margin-bottom: 1rem">Sobre Nós</h1>
+
+        <p class="au-reveal au-body-text au-reveal--d2" style="margin: 0 auto; text-align: center">
+          Projeto nasce como trabalho acadêmico na Uninove e se transforma <br>em uma plataforma real de vendas.</p>
+
+        <hr class="au-divider--gold au-reveal au-reveal--d3" style="margin: 2rem auto 0" />
       </div>
+    </section>
 
-      <nav class="navbar" role="navigation" aria-label="Menu principal">
-        <div class="navbar__links">
-          <a href="/index.html" class="navbar__link">Home</a>
-          <a href="/pages/about/sobre.html" class="navbar__link" aria-current="page">Sobre</a>
-          <a href="/pages/equipe/equipe.html" class="navbar__link">Equipe</a>
-          <a href="/pages/auth/login.html" class="navbar__link">Login</a>
-          <a href="/pages/contact/contato.html" class="navbar__link">Contato</a>
+
+    <!-- ══════════════════════════════════════════════════════
+     SEÇÃO: HISTÓRIA DA EMPRESA
+     Adicione este bloco no participantes.html,
+     logo ANTES da section do carrossel de membros.
+
+     Classes Aurora usadas:
+     · au-section--dark    → fundo levemente mais claro (#141414)
+     · au-container        → centraliza com max-width 1280px
+     · au-reveal           → fade-in ao entrar na viewport (JS automático)
+     · au-reveal--left/right → slide lateral
+     · au-reveal--d1/d2/d3 → delays em cascata
+     · au-h2               → título de seção
+     · au-h3               → subtítulo em dourado
+     · au-body-text        → corpo de texto cinza claro
+     · au-divider--gold    → linha dourada decorativa
+     · au-badge--gold      → tag de destaque
+     · au-grid-2           → layout 50/50 responsivo
+     · au-specs            → tabela de dados chave/valor
+     · au-spec-row         → linha individual da tabela
+══════════════════════════════════════════════════════ -->
+
+    <section class="au-section--dark" id="historia" aria-labelledby="historia-title">
+      <div class="au-container">
+        <div class="au-section-header au-reveal">
+          <span class="au-section-header__eyebrow">Nossa Historia</span>
+          <h2 id="historia-title" class="au-section-header__title">Como tudo começou</h2>
+          <p class="au-section-header__body">De uma ideia universitária a uma plataforma automotiva completa.</p>
         </div>
-      </nav>
-    </header>
 
-    <!-- MAIN CONTENT -->
-    <main id="main-content">
-      <!-- HERO -->
-      <div class="sobre-hero">
-        <h1 class="sobre-hero__title">Sobre Nós</h1>
-        <p class="sobre-hero__subtitle">Conheça a história por trás da Vortex Motors</p>
-        <div class="linha-divisora"></div>
-      </div>
+        <hr class="au-divider--gold au-reveal" style="margin-bottom: 3.5rem;" />
 
-      <!-- SECTIONS -->
-      <div class="sobre-container">
-        <!-- História -->
-        <article class="secao">
-          <h2 class="secao-titulo">Nossa História</h2>
-          <p>
+        <div class="au-grid-2" style="gap: 4rem; align-items: start;">
+
+          <div class="au-reveal au-reveal--left"><!-- /coluna esquerda --> 
+
+            <div class="au-h3" style="margin-bottom: 0.75rem;">O Inicio</div>
+            <p class="au-body-text" style="margin-bottom: 2rem;">
+              Pensando em uma maneira mais rápida e prática de atender
+              clientes na área automotiva, e devido à alta demanda de
+              atendimento presencial, um pequeno grupo de alunos em
+              Ciência da Computação da Uninove decidiu criar um site e
+              iniciar seus negócios — tudo começou em 2026.</p>
+
+            <div class="au-h3" style="margin-bottom: 0.75rem;">A História</div>
+            <p class="au-body-text" style="margin-bottom: 2rem;">
             Pensando em uma maneira mais rápida e prática de atender clientes na área automotiva, 
             e devido à alta demanda de atendimento presencial, um pequeno grupo de alunos em Ciência 
             da Computação da Uninove decidiu criar um site e iniciar seus negócios — tudo começou em 2026.
-          </p>
-          <p>
             A ideia era juntar a área automotiva que já tínhamos antes e transformá-la num site para 
             melhorar o atendimento. E boom — isso acabou alavancando muito as vendas, e hoje somos 
-            um dos maiores do mercado neste setor.
-          </p>
-        </article>
+            um dos maiores do mercado neste setor.</p>
 
-        <!-- Missão, Visão e Valores -->
-        <article class="secao">
-          <h2 class="secao-titulo">Missão, Visão e Valores</h2>
-          <div class="mvv-grid">
-            <div class="mvv-card">
-              <h3 class="mvv-card__title">Missão</h3>
-              <p>
+            <div class="au-h3" style="margin-bottom: 0.75rem;">Nossos Valores</div>
+            <div style="display: grid; grid-template-columns: 1fr;">
+                <span class="au-body-text">Compromisso com o cliente</span>
+                <span class="au-body-text">Transparência nas negociações</span>
+                <span class="au-body-text">Qualidade dos produtos e serviços</span>
+                <span class="au-body-text">Inovação tecnológica</span>
+                <span class="au-body-text">Ética e responsabilidade</span>
+                <span class="au-body-text">Agilidade e eficiência</span>
+              </div>
+
+
+          </div><!-- /coluna esquerda -->
+
+          <div class="au-reveal au-reveal--right"><!-- /coluna direita -->
+            <!-- Badges de destaque -->
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 2rem;">
+              <span class="au-badge au-badge--gold">Fundada em 2026</span>
+              <span class="au-badge au-badge--white">São Paulo, SP</span>
+              <span class="au-badge au-badge--gold">100% Digital</span>
+            </div>
+
+            <div class="au-specs"><!-- Tabela de dados institucionais (au-specs) -->
+              <div class="au-spec-row">
+                <span class="au-spec-row__key">Fundação</span>
+                <span class="au-spec-row__value">2026</span>
+              </div>
+
+              <div class="au-spec-row">
+                <span class="au-spec-row__key">Sede</span>
+                <span class="au-spec-row__value">São Paulo, SP</span>
+              </div>
+
+              <div class="au-spec-row">
+                <span class="au-spec-row__key">Área de Atuação</span>
+                <span class="au-spec-row__value">Veículos Elétricos & Híbridos</span>
+              </div>
+
+              <div class="au-spec-row">
+                <span class="au-spec-row__key">Equipe</span>
+                <span class="au-spec-row__value">8 membros</span>
+              </div>
+
+              <div class="au-spec-row">
+                <span class="au-spec-row__key">Veículos no estoque</span>
+                <span class="au-spec-row__value">25 modelos</span>
+              </div>
+
+              <div class="au-spec-row">
+                <span class="au-spec-row__key">Instituição</span>
+                <span class="au-spec-row__value">Uninove — Ciência da Computação</span>
+              </div>
+
+            </div><!-- /au-specs -->
+          </div><!-- /coluna direita -->
+        </div><!-- /au-grid-2 -->
+
+        <div style="margin-top: 5rem;"><!-- /linha do tempo -->
+          <div class="au-h2" style="text-align: center; font-size: 2.5rem; color: var(--au-gold); margin-bottom: 0.5rem;">Missão, Visão e Valores</div>
+          <div class="au-grid-3"><!-- /au-grid-3 -->
+          
+            <!-- Marco 1 -->
+            <div class="au-reveal au-reveal--d1"
+              style="padding: 1.5rem; border: 1px solid var(--au-divider); position: relative;">
+              
+              <div class="au-h3" style="margin-bottom: 0.5rem;">Missão</div>
+              <p class="au-body-text">
                 Oferecer soluções automotivas completas por meio de uma plataforma digital confiável, 
-                proporcionando qualidade, praticidade e excelência no atendimento aos clientes.
-              </p>
+                proporcionando qualidade, praticidade e excelência no atendimento aos clientes.</p>
             </div>
+          
+            <!-- Marco 2 -->
+            <div class="au-reveal au-reveal--d2" style="padding: 1.5rem; border: 1px solid var(--au-divider);">
 
-            <div class="mvv-card">
-              <h3 class="mvv-card__title">Visão</h3>
-              <p>
+              <div class="au-h3" style="margin-bottom: 0.5rem;">Visão</div>
+              <p class="au-body-text">
                 Ser referência no mercado digital automotivo no Brasil, destacando-se pela inovação, 
-                variedade de produtos e experiência do cliente.
-              </p>
+                variedade de produtos e experiência do cliente.</p>
             </div>
 
-            <div class="mvv-card">
-              <h3 class="mvv-card__title">Valores</h3>
-              <ul>
-                <li>Compromisso com o cliente</li>
-                <li>Transparência nas negociações</li>
-                <li>Qualidade dos produtos e serviços</li>
-                <li>Inovação tecnológica</li>
-                <li>Ética e responsabilidade</li>
-                <li>Agilidade e eficiência</li>
-              </ul>
-            </div>
-          </div>
-        </article>
+            <!-- Marco 3 -->
+            <div class="au-reveal au-reveal--d3" style="padding: 1.5rem; border: 1px solid var(--au-divider);">
+              <div class="au-h3" style="margin-bottom: 0.5rem;">Valores</div>
+              <div style="display: grid; grid-template-columns: 1fr;">
+                <span class="au-body-text">Compromisso com o cliente</span>
+                <span class="au-body-text">Transparência nas negociações</span>
+                <span class="au-body-text">Qualidade dos produtos e serviços</span>
+                <span class="au-body-text">Inovação tecnológica</span>
+                <span class="au-body-text">Ética e responsabilidade</span>
+                <span class="au-body-text">Agilidade e eficiência</span>
+              </div>
+          </div><!-- /au-grid-3 -->
+        </div><!-- /linha do tempo -->
+      </div><!-- /au-container -->
+    </section>
 
-        <!-- Área de Atuação -->
-        <article class="secao">
-          <h2 class="secao-titulo">Área de Atuação</h2>
-          <div class="atuacao-badge">⚙ Setor de Vendas Automotivas</div>
-        </article>
+    <!-- ── CARROSSEL DE MEMBROS ───────────────────────────── -->
+    <section class="au-section" aria-labelledby="membros-title">
+      <div class="au-container">
+        <div class="au-section-header au-reveal">
+          <span class="au-section-header__eyebrow">Equipe</span>
+          <h2 id="membros-title" class="au-section-header__title">Conheça os membros</h2>
+        </div>
 
-        <!-- Diferenciais -->
-        <article class="secao">
-          <h2 class="secao-titulo">Nossos Diferenciais</h2>
-          <div class="diferenciais-grid">
-            <div class="diferencial-item">
-              <span class="diferencial-icone">🚚</span>
-              <span class="diferencial-texto">Entrega rápida</span>
-            </div>
+        <div class="au-reveal au-reveal--d1">
+          <div class="team-carousel-wrapper">
+            <!-- Seta esquerda -->
+            <button class="carousel-arrow" id="prevBtn" aria-label="Anterior">
+              &#10094;
+            </button>
 
-            <div class="diferencial-item">
-              <span class="diferencial-icone">💰</span>
-              <span class="diferencial-texto">Preço justo</span>
-            </div>
+            <div class="carousel-container">
+              <div class="carousel-track" id="carouselTrack">
 
-            <div class="diferencial-item">
-              <span class="diferencial-icone">📦</span>
-              <span class="diferencial-texto">Variedade de produtos</span>
-            </div>
+                <!-- ── MEMBRO 1 ── -->
+                <div class="team-card" role="article" aria-label="Matheus Levy">
+                  <div class="team-card__photo-wrap">
+                    <img src="/img/equipe/matheuslevy.jpeg" alt="Matheus Levy" class="team-card__photo"
+                      loading="lazy" />
+                  </div>
+                  <div class="team-card__gold-line"></div>
+                  <div class="team-card__body">
+                    <div class="team-card__role">Documentação</div>
+                    <div class="team-card__name">Matheus Levy</div>
+                    <p class="team-card__desc">
+                      Responsável pela documentação do projeto.</p>
+                    <a href="https://www.instagram.com/arianagrande/" class="au-btn au-btn--ghost au-btn--sm"
+                      target="_blank" rel="noopener noreferrer">@ Instagram</a>
+                  </div>
+                </div>
 
-            <div class="diferencial-item">
-              <span class="diferencial-icone">💻</span>
-              <span class="diferencial-texto">Facilidade no site</span>
-            </div>
+                <!-- ── MEMBRO 2 ── -->
+                <div class="team-card" role="article" aria-label="Felipe Diassis">
+                  <div class="team-card__photo-wrap">
+                    <img src="/img/equipe/felipediassis.jpg" alt="Felipe Diassis" class="team-card__photo"
+                      loading="lazy" />
+                  </div>
+                  <div class="team-card__gold-line"></div>
+                  <div class="team-card__body">
+                    <div class="team-card__role">Frontend</div>
+                    <div class="team-card__name">Felipe Diassis</div>
+                    <p class="team-card__desc">Responsável pelo desenvolvimento frontend.</p>
+                    <a href="https://instagram.com/usuario" class="au-btn au-btn--ghost au-btn--sm" target="_blank"
+                      rel="noopener noreferrer">@ Instagram</a>
+                  </div>
+                </div>
 
-            <div class="diferencial-item">
-              <span class="diferencial-icone">🔧</span>
-              <span class="diferencial-texto">Peça certa para o carro certo</span>
-            </div>
+                <!-- ── MEMBRO 3 ── -->
+                <div class="team-card" role="article" aria-label="Julia Zézilia">
+                  <div class="team-card__photo-wrap">
+                    <img src="/img/equipe/juliazezilia.jpeg" alt="Julia Zézilia" class="team-card__photo"
+                      loading="lazy" />
+                  </div>
+                  <div class="team-card__gold-line"></div>
+                  <div class="team-card__body">
+                    <div class="team-card__role">Banco de Dados</div>
+                    <div class="team-card__name">Julia Zézilia</div>
+                    <p class="team-card__desc">Responsável pelo desenvolvimento de banco de dados.</p>
+                    <a href="https://instagram.com/usuario" class="au-btn au-btn--ghost au-btn--sm" target="_blank"
+                      rel="noopener noreferrer">@ Instagram</a>
+                  </div>
+                </div>
 
-            <div class="diferencial-item">
-              <span class="diferencial-icone">🎧</span>
-              <span class="diferencial-texto">Atendimento especializado</span>
-            </div>
+                <!-- ── MEMBRO 4 ── -->
+                <div class="team-card" role="article" aria-label="Gabriel Oliani">
+                  <div class="team-card__photo-wrap">
+                    <img src="/img/equipe/gabrieloliani.jpeg" alt="Gabriel Oliani" class="team-card__photo"
+                      loading="lazy" />
+                  </div>
+                  <div class="team-card__gold-line"></div>
+                  <div class="team-card__body">
+                    <div class="team-card__role">Banco de Dados</div>
+                    <div class="team-card__name">Gabriel Oliani</div>
+                    <p class="team-card__desc">Responsável pelo desenvolvimento de banco de dados.</p>
+                    <a href="https://instagram.com/SEU_USUARIO" class="au-btn au-btn--ghost au-btn--sm" target="_blank"
+                      rel="noopener noreferrer">@ Instagram</a>
+                  </div>
+                </div>
 
-            <div class="diferencial-item">
-              <span class="diferencial-icone">✅</span>
-              <span class="diferencial-texto">Garantia e confiança</span>
-            </div>
-          </div>
-        </article>
+                <!-- ── MEMBRO 5 ── -->
+                <div class="team-card" role="article" aria-label="Pedro Monteiro">
+                  <div class="team-card__photo-wrap">
+                    <img src="/img/equipe/pedromonteiro.jpeg" alt="Pedro Monteiro" class="team-card__photo"
+                      loading="lazy" />
+                  </div>
+                  <div class="team-card__gold-line"></div>
+                  <div class="team-card__body">
+                    <div class="team-card__role">Frontend</div>
+                    <div class="team-card__name">Pedro Monteiro</div>
+                    <p class="team-card__desc">Responsável pelo desenvolvimento frontend.</p>
+                    <a href="https://instagram.com/SEU_USUARIO" class="au-btn au-btn--ghost au-btn--sm" target="_blank"
+                      rel="noopener noreferrer">@ Instagram</a>
+                  </div>
+                </div>
+
+                <!-- ── MEMBRO 6 ── -->
+                <div class="team-card" role="article" aria-label="João Victor">
+                  <div class="team-card__photo-wrap">
+                    <img src="/img/equipe/joaovictor.jpeg" alt="João Victor" class="team-card__photo" loading="lazy" />
+                  </div>
+                  <div class="team-card__gold-line"></div>
+                  <div class="team-card__body">
+                    <div class="team-card__role">Backend</div>
+                    <div class="team-card__name">João Victor</div>
+                    <p class="team-card__desc">Responsável pelo desenvolvimento backend.</p>
+                    <a href="https://instagram.com/SEU_USUARIO" class="au-btn au-btn--ghost au-btn--sm" target="_blank"
+                      rel="noopener noreferrer">@ Instagram</a>
+                  </div>
+                </div>
+
+                <!-- ── MEMBRO 7 ── -->
+                <div class="team-card" role="article" aria-label="Marcelo Floriano">
+                  <div class="team-card__photo-wrap">
+                    <img src="/img/equipe/marcelofloriano.jpeg" alt="Marcelo Floriano" class="team-card__photo"
+                      loading="lazy" />
+                  </div>
+                  <div class="team-card__gold-line"></div>
+                  <div class="team-card__body">
+                    <div class="team-card__role">Frontend</div>
+                    <div class="team-card__name">Marcelo Floriano</div>
+                    <p class="team-card__desc">Responsável pelo desenvolvimento frontend.</p>
+                    <a href="https://instagram.com/SEU_USUARIO" class="au-btn au-btn--ghost au-btn--sm" target="_blank"
+                      rel="noopener noreferrer">@ Instagram</a>
+                  </div>
+                </div>
+
+                <!-- ── MEMBRO 8 ── -->
+                <div class="team-card" role="article" aria-label="Matheus Luca">
+                  <div class="team-card__photo-wrap">
+                    <img src="/img/equipe/matheusluca.jpeg" alt="Matheus Luca" class="team-card__photo"
+                      loading="lazy" />
+                  </div>
+                  <div class="team-card__gold-line"></div>
+                  <div class="team-card__body">
+                    <div class="team-card__role">Frontend</div>
+                    <div class="team-card__name">Matheus Luca</div>
+                    <p class="team-card__desc">Responsável pelo desenvolvimento frontend.</p>
+                    <a href="https://instagram.com/SEU_USUARIO" class="au-btn au-btn--ghost au-btn--sm" target="_blank"
+                      rel="noopener noreferrer">@ Instagram</a>
+                  </div>
+                </div>
+
+              </div> <!-- /carousel-track -->
+            </div> <!-- /carousel-container -->
+
+            <button class="carousel-arrow" id="nextBtn" aria-label="Próximo">&#10095;</button> <!-- Seta direita -->
+          </div> <!-- /team-carousel-wrapper -->
+
+          <!-- Dots -->
+          <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navegação do carrossel"></div>
+        </div>
       </div>
-    </main>
+    </section>
+  </main>
 
-    <!-- WHATSAPP FLOAT -->
-    <a 
-      href="https://wa.me/5511984039699" 
-      class="whatsapp-float" 
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Fale conosco pelo WhatsApp"
-    >
-      <img 
-        src="/img/whatsapp.png" 
-        alt="Ícone WhatsApp" 
-        class="whatsapp-float__icon"
-        width="60"
-        height="60"
-      />
-    </a>
-  </body>
+  <!-- Aurora JS -->
+  <script src="/public/js/aurora.js"></script>
+  <!-- Carrossel (inalterado) -->
+  <script src="/public/js/team-carousel.js"></script>
+</body>
+
 </html>

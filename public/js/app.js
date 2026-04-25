@@ -46,7 +46,7 @@ function renderizarVeiculos(veiculos) {
           <span class="au-badge au-badge--gold">${v.status}</span>
         </div>
         <h3 class="vehicle-card__name">${v.nome}</h3>
-        <p class="vehicle-card__meta">${v.ano} · ${v.transmissao} · ${v.motor}</p>
+        <p class="vehicle-card__meta">${v.ano} · ${v.transmissao} · ${v.bateria}</p>
       
         <div class="vehicle-card__specs">
           <div class="vehicle-card__spec-item">
@@ -55,8 +55,8 @@ function renderizarVeiculos(veiculos) {
           </div>
       
           <div class="vehicle-card__spec-item">
-            <span class="vehicle-card__spec-label">KM</span>
-            <span class="vehicle-card__spec-value">${v.km}</span>
+            <span class="vehicle-card__spec-label">KM por Carga</span>
+            <span class="vehicle-card__spec-value">${v["km por carga"]}</span>
           </div>
       
           <div class="vehicle-card__spec-item">

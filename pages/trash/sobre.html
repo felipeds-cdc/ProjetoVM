@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conheça a história e os valores da Vortex Motors" />
+    
+    <title>VORTEX MOTORS - Sobre Nós</title>
+    
+    <link rel="stylesheet" href="/public/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Estilos específicos para página Sobre */
+      .sobre-hero {
+        text-align: center;
+        padding: 70px 20px 50px;
+        border-bottom: 1px solid var(--border-color);
+      }
+      
+      .sobre-hero__title {
+        font-family: var(--font-heading);
+        font-size: clamp(26px, 5vw, 50px);
+        color: var(--color-primary-dark);
+        letter-spacing: 5px;
+        text-transform: uppercase;
+      }
+      
+      .sobre-hero__subtitle {
+        color: var(--text-muted);
+        font-size: 16px;
+        letter-spacing: 2px;
+        margin-top: 10px;
+      }
+      
+      .linha-divisora {
+        width: 80px;
+        height: 3px;
+        background: var(--color-primary-dark);
+        margin: 20px auto 0;
+      }
+      
+      .sobre-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 60px 30px 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+      }
+      
+      .secao {
+        animation: fadeUp 0.7s ease both;
+      }
+      
+      .secao:nth-child(1) { animation-delay: 0.1s; }
+      .secao:nth-child(2) { animation-delay: 0.2s; }
+      .secao:nth-child(3) { animation-delay: 0.3s; }
+      .secao:nth-child(4) { animation-delay: 0.4s; }
+      
+      .secao-titulo {
+        font-family: var(--font-heading);
+        font-size: clamp(14px, 2.5vw, 18px);
+        color: var(--color-primary-dark);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      
+      .secao-titulo::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--border-color);
+      }
+      
+      .secao p {
+        color: var(--text-secondary);
+        font-size: 17px;
+        line-height: 1.8;
+      }
+      
+      .mvv-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+      
+      .mvv-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        padding: 28px 24px;
+        flex: 1;
+        min-width: 220px;
+        transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+      }
+      
+      .mvv-card:hover {
+        border-color: var(--color-primary-dark);
+        box-shadow: var(--shadow-glow-sm);
+      }
+      
+      .mvv-card__title {
+        font-family: var(--font-heading);
+        font-size: 13px;
+        color: var(--color-primary-dark);
+        letter-spacing: 2px;
+        margin-bottom: 14px;
+        text-transform: uppercase;
+      }
+      
+      .mvv-card p, .mvv-card ul {
+        color: var(--text-secondary);
+        font-size: 16px;
+        line-height: 1.8;
+      }
+      
+      .mvv-card ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .mvv-card ul li::before {
+        content: "› ";
+        color: var(--color-primary-dark);
+        font-weight: bold;
+      }
+      
+      .diferenciais-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      
+      .diferencial-item {
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 16px 22px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
+        min-width: 200px;
+        transition: border-color var(--transition-normal), transform var(--transition-normal);
+      }
+      
+      .diferencial-item:hover {
+        border-color: var(--color-primary-dark);
+        transform: translateY(-4px);
+      }
+      
+      .diferencial-icone {
+        font-size: 22px;
+      }
+      
+      .diferencial-texto {
+        color: var(--text-secondary);
+        font-size: 16px;
+        letter-spacing: 0.5px;
+      }
+      
+      .atuacao-badge {
+        display: inline-block;
+        background: var(--bg-card);
+        border: 1px solid var(--color-primary-dark);
+        border-radius: 6px;
+        padding: 12px 28px;
+        color: var(--color-primary-dark);
+        font-family: var(--font-heading);
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header" role="banner">
+      <div class="header__logo">
+        <a href="/index.html" aria-label="Vortex Motors - Página inicial">
+          <img src="/img/LOGO.png" alt="Logo Vortex Motors" width="290" height="auto" />
+        </a>
+      </div>
+
+      <nav class="navbar" role="navigation" aria-label="Menu principal">
+        <div class="navbar__links">
+          <a href="/index.html" class="navbar__link">Home</a>
+          <a href="/pages/about/sobre.html" class="navbar__link" aria-current="page">Sobre</a>
+          <a href="/pages/equipe/equipe.html" class="navbar__link">Equipe</a>
+          <a href="/pages/auth/login.html" class="navbar__link">Login</a>
+          <a href="/pages/contact/contato.html" class="navbar__link">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+      <!-- HERO -->
+      <div class="sobre-hero">
+        <h1 class="sobre-hero__title">Sobre Nós</h1>
+        <p class="sobre-hero__subtitle">Conheça a história por trás da Vortex Motors</p>
+        <div class="linha-divisora"></div>
+      </div>
+
+      <!-- SECTIONS -->
+      <div class="sobre-container">
+        <!-- História -->
+        <article class="secao">
+          <h2 class="secao-titulo">Nossa História</h2>
+          <p>
+            Pensando em uma maneira mais rápida e prática de atender clientes na área automotiva, 
+            e devido à alta demanda de atendimento presencial, um pequeno grupo de alunos em Ciência 
+            da Computação da Uninove decidiu criar um site e iniciar seus negócios — tudo começou em 2026.
+          </p>
+          <p>
+            A ideia era juntar a área automotiva que já tínhamos antes e transformá-la num site para 
+            melhorar o atendimento. E boom — isso acabou alavancando muito as vendas, e hoje somos 
+            um dos maiores do mercado neste setor.
+          </p>
+        </article>
+
+        <!-- Missão, Visão e Valores -->
+        <article class="secao">
+          <h2 class="secao-titulo">Missão, Visão e Valores</h2>
+          <div class="mvv-grid">
+            <div class="mvv-card">
+              <h3 class="mvv-card__title">Missão</h3>
+              <p>
+                Oferecer soluções automotivas completas por meio de uma plataforma digital confiável, 
+                proporcionando qualidade, praticidade e excelência no atendimento aos clientes.
+              </p>
+            </div>
+
+            <div class="mvv-card">
+              <h3 class="mvv-card__title">Visão</h3>
+              <p>
+                Ser referência no mercado digital automotivo no Brasil, destacando-se pela inovação, 
+                variedade de produtos e experiência do cliente.
+              </p>
+            </div>
+
+            <div class="mvv-card">
+              <h3 class="mvv-card__title">Valores</h3>
+              <ul>
+                <li>Compromisso com o cliente</li>
+                <li>Transparência nas negociações</li>
+                <li>Qualidade dos produtos e serviços</li>
+                <li>Inovação tecnológica</li>
+                <li>Ética e responsabilidade</li>
+                <li>Agilidade e eficiência</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Área de Atuação -->
+        <article class="secao">
+          <h2 class="secao-titulo">Área de Atuação</h2>
+          <div class="atuacao-badge">⚙ Setor de Vendas Automotivas</div>
+        </article>
+
+        <!-- Diferenciais -->
+        <article class="secao">
+          <h2 class="secao-titulo">Nossos Diferenciais</h2>
+          <div class="diferenciais-grid">
+            <div class="diferencial-item">
+              <span class="diferencial-icone">🚚</span>
+              <span class="diferencial-texto">Entrega rápida</span>
+            </div>
+
+            <div class="diferencial-item">
+              <span class="diferencial-icone">💰</span>
+              <span class="diferencial-texto">Preço justo</span>
+            </div>
+
+            <div class="diferencial-item">
+              <span class="diferencial-icone">📦</span>
+              <span class="diferencial-texto">Variedade de produtos</span>
+            </div>
+
+            <div class="diferencial-item">
+              <span class="diferencial-icone">💻</span>
+              <span class="diferencial-texto">Facilidade no site</span>
+            </div>
+
+            <div class="diferencial-item">
+              <span class="diferencial-icone">🔧</span>
+              <span class="diferencial-texto">Peça certa para o carro certo</span>
+            </div>
+
+            <div class="diferencial-item">
+              <span class="diferencial-icone">🎧</span>
+              <span class="diferencial-texto">Atendimento especializado</span>
+            </div>
+
+            <div class="diferencial-item">
+              <span class="diferencial-icone">✅</span>
+              <span class="diferencial-texto">Garantia e confiança</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- WHATSAPP FLOAT -->
+    <a 
+      href="https://wa.me/5511984039699" 
+      class="whatsapp-float" 
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Fale conosco pelo WhatsApp"
+    >
+      <img 
+        src="/img/whatsapp.png" 
+        alt="Ícone WhatsApp" 
+        class="whatsapp-float__icon"
+        width="60"
+        height="60"
+      />
+    </a>
+  </body>
+</html>
