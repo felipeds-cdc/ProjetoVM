@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vortex Motors - Estoque completo de veículos novos e seminovos." />
+  <title>VORTEX MOTORS - Veículos</title>
+
+  <link rel="stylesheet" href="/public/css/aurora.css" />
+  <link rel="stylesheet" href="/public/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/img/LOGO.png" />
+
+  <style>
+    .au-reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      visibility: visible !important;
+    }
+
+    .vehicle-card,
+    .vehicle-card img {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  </style>
+
+</head>
+
+<body class="au-body">
+
+  <header class="au-header" role="banner">
+    <a href="/index.html" class="au-logo" aria-label="Vortex Motors - Página inicial">
+      <img src="/img/LOGO.png" alt="Logo Vortex Motors" width="160" height="auto" />
+    </a>
+
+    <nav role="navigation" aria-label="Menu principal">
+      <ul class="au-nav">
+        <li><a href="/index.html"                     class="au-nav__link">Home</a></li>
+        <li><a href="/pages/about/sobre.html"         class="au-nav__link">Sobre</a></li>
+        <li><a href="/pages/about/sobre.html#equipe"       class="au-nav__link">Equipe</a></li>
+        <li><a href="/pages/auth/login.html"          class="au-nav__link">Login</a></li>
+        <li><a href="/pages/contact/contato.html"     class="au-nav__link">Contato</a></li>
+      </ul>
+    </nav>
+
+    <a href="/pages/contact/contato.html" class="au-btn au-btn--solid au-btn--sm">
+      Fale Conosco
+    </a>
+  </header>
+
+
+  <main id="main-content">
+
+    <!-- ══════════════════════════════════════════════════════
+         HERO COMPACTO DA PÁGINA
+    ══════════════════════════════════════════════════════ -->
+    <section
+      class="au-section"
+      style="padding-top:9rem; padding-bottom:4rem; border-bottom:1px solid var(--au-divider);"
+      aria-labelledby="veiculos-title"
+    >
+      <div class="au-container">
+        <span class="au-section-header__eyebrow">Estoque Disponível</span>
+        <h1 id="veiculos-title" class="au-h1">
+          Veículos à Venda
+        </h1>
+        <p class="au-body-text">
+          Todos os veículos passam por inspeção completa de 120 pontos antes da entrega.
+          Financiamento em até 60x e troca avaliada na hora.
+        </p>
+
+        <!-- Estatísticas rápidas -->
+        <div class="" style="display:flex; gap:2rem; margin-top:2.5rem; flex-wrap:wrap;">
+          <div>
+            <div id="total-veiculos" class="au-h2" style="font-size:28px; color:var(--au-gold);">25</div>
+            <div class="au-label">Veículos em estoque</div>
+          </div>
+          <div style="width:1px; background:var(--au-divider);"></div>
+          <div>
+            <div id="total-marcas" class="au-h2" style="font-size:28px;">5</div>
+            <div class="au-label">Marcas disponíveis</div>
+          </div>
+          <div style="width:1px; background:var(--au-divider);"></div>
+          <div>
+            <div class="au-h2" style="font-size:28px;">100%</div>
+            <div class="au-label">Laudos verificados</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         FILTROS
+         Os selects são .au-select com .au-form-group/.au-form-label.
+         Adapte as opções conforme o seu banco de dados.
+    ══════════════════════════════════════════════════════ -->
+    <section class="au-section" style="padding-top:3rem; padding-bottom:0;">
+      <div class="au-container">
+        <div class="filters-bar">
+
+          <!-- Filtro: Marca -->
+          <div class="au-form-group">
+            <label for="filtro-marca" class="au-form-label">Marca</label>
+            <select id="filtro-marca" class="au-select">
+              <option value="">Todas</option>
+              <option value="byd">BYD</option>
+              <option value="tesla">Tesla</option>
+              <option value="gwm">GWM</option>
+              <option value="jac">JAC</option>
+              <option value="renault">Renault</option>
+            </select>
+          </div>
+
+          <!-- Filtro: Ano -->
+          <div class="au-form-group">
+            <label for="filtro-ano" class="au-form-label">Ano</label>
+            <select id="filtro-ano" class="au-select">
+              <option value="">Todos</option>
+              <option value="2025">2025/2026</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+            </select>
+          </div>
+
+          <!-- Filtro: Preço -->
+          <div class="au-form-group">
+            <label for="filtro-preco" class="au-form-label">Faixa de Preço</label>
+            <select id="filtro-preco" class="au-select">
+              <option value="">Qualquer</option>
+              <option value="0-100">Até R$ 100.000</option>
+              <option value="100-200">R$ 100k – R$ 200k</option>
+              <option value="200-350">R$ 200k – R$ 350k</option>
+              <option value="350+">Acima de R$ 350k</option>
+            </select>
+          </div>
+
+          <!-- Filtro: Ordenar -->
+          <div class="au-form-group">
+            <label for="filtro-ordem" class="au-form-label">Ordenar por</label>
+            <select id="filtro-ordem" class="au-select">
+              <option value="recente">Mais recente</option>
+              <option value="menor-preco">Menor preço</option>
+              <option value="maior-preco">Maior preço</option>
+              <option value="km">Menor km</option>
+            </select>
+          </div>
+
+          <button id="buscar-veiculos" class="au-btn au-btn--ghost" type="button">Buscar</button>
+
+        </div><!-- /filters-bar -->
+      </div>
+    </section>
+
+    <section class="au-section" id="estoque" aria-labelledby="estoque-label">
+      <div class="au-container">
+
+        <p class="results-count" aria-live="polite">Exibindo <span id="veiculos-exibidos">25</span> de <span id="veiculos-total">25</span> veiculos</p>
+
+        <div id="veiculos-container"">
+
+          <article>
+            
+            <div id="loading" class="status">Carregando veículos...</div>
+            <div id="error" class="status error" style="display: none;"></div>
+            <div id="car-container" class="car-grid au-grid-3"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER CTA — FINANCIAMENTO -->
+    <section
+      class="au-section--white"
+      style="text-align:center;"
+      aria-labelledby="financiamento-title"
+    >
+      <div class="au-container">
+        <div class="au-reveal">
+          <span class="au-section-header__eyebrow" style="color:var(--au-gold);">Sem burocracia</span>
+          <h2 id="financiamento-title" class="au-section-header__title" style="color:var(--au-black); margin:0.5rem auto 1rem;">
+            Financiamento em até 60x
+          </h2>
+          <p class="au-body-text" style="color:#555; margin:0 auto 2rem; text-align:center;">
+            Aprovação em minutos. Entrada a partir de 10%. Aceite de veículo como parte do pagamento.
+          </p>
+          <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+            <a href="/pages/contact/contato.html" class="au-btn au-btn--solid">Simular Financiamento</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="au-footer" role="contentinfo">   <!-- FOOTER -->
+    <div class="au-container">
+      <div class="au-footer__grid">
+        <div>
+          <p class="au-footer__heading">Vortex Motors</p>
+          <a href="/index.html"                    class="au-footer__link">Home</a>
+          <a href="/pages/about/sobre.html"        class="au-footer__link">Sobre</a>
+          <a href="/pages/about/sobre.html#equipe"      class="au-footer__link">Equipe</a>
+        </div>
+        <div>
+          <p class="au-footer__heading">Estoque</p>
+          <a href="/pages/veiculos/veiculos.html"  class="au-footer__link">Veículos</a>
+          <a href="/pages/pecas/pecas.html"        class="au-footer__link">Peças</a>
+          <a href="/pages/carregamento/carregamento.html" class="au-footer__link">Ponto de Carregamento</a>
+        </div>
+        <div>
+          <p class="au-footer__heading">Atendimento</p>
+          <a href="/pages/contact/contato.html"    class="au-footer__link">Fale Conosco</a>
+          <a href="/pages/auth/login.html"         class="au-footer__link">Área do Cliente</a>
+        </div>
+        <div>
+          <p class="au-footer__heading">Legal</p>
+          <a href="#" class="au-footer__link">Termos de Uso</a>
+          <a href="#" class="au-footer__link">Privacidade</a>
+        </div>
+      </div>
+      <div class="au-footer__bottom">
+        <span class="au-caption">&copy; 2024 Vortex Motors. Todos os direitos reservados.</span>
+        <span class="au-caption au-text--muted">O futuro em movimento.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/public/js/app.js?v=2"></script>
+  <script src="/public/js/aurora.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Entre em contato com a Vortex Motors" />
+    <title>VORTEX MOTORS — Contato</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/aurora.css" />
+
+    <style>
+      /* ── Page layout ── */
+      .contact-page {
+        padding-top: 120px;
+        padding-bottom: 6rem;
+      }
+
+      /* Header do hero mínimo */
+      .contact-hero {
+        padding: 0 2rem 4rem;
+        max-width: 1480px;
+        margin: 0 auto;
+      }
+
+      .contact-hero__eyebrow {
+        display: block;
+        font-size: 9px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--au-gold);
+        margin-bottom: 0.75rem;
+      }
+
+      .contact-hero__title {
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        letter-spacing: 0.08em;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: var(--au-white);
+        line-height: 1.1;
+        margin-bottom: 1.25rem;
+      }
+
+      .contact-hero__desc {
+        font-size: 13px;
+        color: var(--au-gray);
+        line-height: 1.8;
+        max-width: 440px;
+      }
+
+      .contact-hero__accent {
+        width: 48px;
+        height: 2px;
+        background: var(--au-gold);
+        margin-bottom: 1.25rem;
+      }
+
+      /* Grid: form + info side by side */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 2px;
+        max-width: 1480px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      /* Form card */
+      .contact-form-card {
+        background: var(--au-card-bg);
+        border: 1px solid var(--au-divider);
+        padding: 3rem;
+      }
+
+      .contact-form-card__label {
+        display: block;
+        font-size: 9px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--au-gold);
+        margin-bottom: 2rem;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .contact-form__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .contact-form .au-textarea {
+        min-height: 160px;
+        resize: vertical;
+      }
+
+      .contact-form__submit {
+        align-self: flex-start;
+        padding: 13px 40px;
+        font-size: 10px;
+        letter-spacing: 0.25em;
+      }
+
+      /* Info card */
+      .contact-info-card {
+        background: var(--au-black);
+        border: 1px solid var(--au-divider);
+        border-left: none;
+        padding: 3rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+      }
+
+      .contact-info-card__section-label {
+        display: block;
+        font-size: 9px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--au-gold);
+        margin-bottom: 1.25rem;
+      }
+
+      .contact-info__item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid var(--au-divider);
+      }
+
+      .contact-info__item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .contact-info__key {
+        font-size: 8px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--au-gray);
+      }
+
+      .contact-info__value {
+        font-size: 13px;
+        color: var(--au-white);
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        transition: color var(--au-transition);
+      }
+
+      a.contact-info__value:hover {
+        color: var(--au-gold);
+        transform: none;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-info-card {
+          border-left: 1px solid var(--au-divider);
+          border-top: none;
+        }
+
+        .contact-form__row {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .contact-form-card,
+        .contact-info-card {
+          padding: 2rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="au-body">
+
+    <!-- HEADER -->
+    <header class="au-header" role="banner">
+      <a href="/index.html" class="au-logo" aria-label="Vortex Motors — Página inicial">
+        <img src="/img/LOGO.png" alt="Vortex Motors" height="32" />
+      </a>
+
+      <nav role="navigation" aria-label="Menu principal">
+        <ul class="au-nav">
+          <li><a href="/index.html" class="au-nav__link">Home</a></li>
+          <li><a href="/pages/about/sobre.html" class="au-nav__link">Sobre</a></li>
+          <li><a href="/pages/about/sobre.html#equipe" class="au-nav__link">Equipe</a></li>
+          <li><a href="/pages/auth/login.html" class="au-nav__link">Login</a></li>
+          <li><a href="/pages/contact/contato.html" class="au-nav__link au-nav__link--active" aria-current="page">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main id="main-content" class="contact-page">
+
+      <!-- Hero -->
+      <div class="contact-hero au-reveal">
+        <div class="contact-hero__accent"></div>
+        <span class="contact-hero__eyebrow">Vortex Motors</span>
+        <h1 class="contact-hero__title">Fale Conosco</h1>
+        <p class="contact-hero__desc">
+          Nossa equipe está pronta para atender você. Preencha o formulário ou use um dos nossos canais diretos.
+        </p>
+      </div>
+
+      <!-- Grid: form + info -->
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div class="contact-form-card au-reveal">
+          <span class="contact-form-card__label">Enviar mensagem</span>
+
+          <form
+            class="contact-form"
+            data-validate
+            action="/api/contact"
+            method="POST"
+            aria-label="Formulário de contato"
+          >
+            <div class="contact-form__row">
+              <div class="au-form-group">
+                <label for="nome" class="au-form-label">Nome</label>
+                <input
+                  class="au-input"
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Seu nome"
+                  required
+                  aria-required="true"
+                  autocomplete="name"
+                />
+              </div>
+
+              <div class="au-form-group">
+                <label for="email" class="au-form-label">Email</label>
+                <input
+                  class="au-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seu@email.com"
+                  required
+                  aria-required="true"
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+
+            <div class="au-form-group">
+              <label for="assunto" class="au-form-label">Assunto</label>
+              <input
+                class="au-input"
+                type="text"
+                id="assunto"
+                name="assunto"
+                placeholder="Como podemos ajudar?"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="au-form-group">
+              <label for="mensagem" class="au-form-label">Mensagem</label>
+              <textarea
+                class="au-textarea"
+                id="mensagem"
+                name="mensagem"
+                placeholder="Digite sua mensagem..."
+                required
+                aria-required="true"
+                rows="6"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="au-btn au-btn--solid contact-form__submit">
+              Enviar mensagem
+            </button>
+          </form>
+        </div>
+
+        <!-- Info -->
+        <div class="contact-info-card au-reveal au-reveal--d2">
+          <div>
+            <span class="contact-info-card__section-label">Informações</span>
+
+            <div class="au-specs">
+              <div class="contact-info__item">
+                <span class="contact-info__key">Localização</span>
+                <span class="contact-info__value">São Paulo — SP</span>
+              </div>
+              <div class="contact-info__item">
+                <span class="contact-info__key">Telefone</span>
+                <a href="tel:+5511984039699" class="contact-info__value">(11) 98403-9699</a>
+              </div>
+              <div class="contact-info__item">
+                <span class="contact-info__key">Email</span>
+                <a href="mailto:contato@vortexmotors.com.br" class="contact-info__value">
+                  contato@vortexmotors.com.br
+                </a>
+              </div>
+              <div class="contact-info__item">
+                <span class="contact-info__key">Horário</span>
+                <span class="contact-info__value">Seg – Sex · 09h às 18h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <script src="/public/js/aurora.js" defer></script>
+    <script src="/public/js/form-validation.js" defer></script>
+    <script src="/public/js/database-client.js" defer></script>
+  </body>
+</html>

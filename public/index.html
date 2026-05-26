@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Cadastro</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body { background: #f5f5f5; padding: 20px; }
+    .container { max-width: 800px; margin: 0 auto; }
+    h1 { text-align: center; margin-bottom: 30px; color: #333; }
+    .forms { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-box { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    h2 { margin-bottom: 20px; color: #555; font-size: 1.3rem; }
+    .form-group { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; font-weight: 500; color: #666; }
+    input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; }
+    button { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; margin-top: 10px; }
+    button:hover { background: #0056b3; }
+    .status { margin-top: 15px; padding: 10px; border-radius: 4px; text-align: center; }
+    .success { background: #d4edda; color: #155724; }
+    .error { background: #f8d7da; color: #721c24; }
+    @media (max-width: 768px) { .forms { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Sistema de Autenticação</h1>
+    
+    <div class="forms">
+      <!-- Formulário de Registro -->
+      <div class="form-box">
+        <h2>📝 Criar Conta</h2>
+        <form id="formRegistro">
+          <div class="form-group">
+            <label>Nome completo *</label>
+            <input type="text" name="nome" required>
+          </div>
+          <div class="form-group">
+            <label>CPF *</label>
+            <input type="text" name="cpf" placeholder="000.000.000-00" required>
+          </div>
+          <div class="form-group">
+            <label>Data de Nascimento *</label>
+            <input type="date" name="birth_date" required>
+          </div>
+          <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" name="phone" placeholder="(00) 00000-0000">
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Senha *</label>
+            <input type="password" name="senha" minlength="6" required>
+          </div>
+          <button type="submit">Registrar</button>
+        </form>
+        <div id="statusRegistro"></div>
+      </div>
+
+      <!-- Formulário de Login -->
+      <div class="form-box">
+        <h2>🔑 Login</h2>
+        <form id="formLogin">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Senha</label>
+            <input type="password" name="senha" required>
+          </div>
+          <button type="submit">Entrar</button>
+        </form>
+        <div id="statusLogin"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Registro
+    document.getElementById('formRegistro').onsubmit = async (e) => {
+      e.preventDefault();
+      const status = document.getElementById('statusRegistro');
+      
+      try {
+        const res = await fetch('/api/registrar', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(e.target)))
+        });
+
+        const data = await res.json();
+        
+        if (res.ok) {
+          status.className = 'status success';
+          status.textContent = '✅ ' + data.mensagem;
+          e.target.reset();
+        } else {
+          status.className = 'status error';
+          status.textContent = '❌ ' + data.erro;
+        }
+      } catch (err) {
+        status.className = 'status error';
+        status.textContent = '❌ Erro de conexão';
+      }
+    };
+
+    // Login
+    document.getElementById('formLogin').onsubmit = async (e) => {
+      e.preventDefault();
+      const status = document.getElementById('statusLogin');
+      
+      try {
+        const res = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(Object.fromEntries(new FormData(e.target)))
+        });
+
+        const data = await res.json();
+        
+        if (res.ok) {
+          status.className = 'status success';
+          status.textContent = '✅ ' + data.mensagem + ' (ID: ' + data.usuario.id + ')';
+          console.log('Usuário logado:', data.usuario);
+        } else {
+          status.className = 'status error';
+          status.textContent = '❌ ' + data.erro;
+        }
+      } catch (err) {
+        status.className = 'status error';
+        status.textContent = '❌ Erro de conexão';
+      }
+    };
+  </script>
+</body>
+</html>

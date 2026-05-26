@@ -1,0 +1,23 @@
+{
+  "nome": "fale_conosco",
+  "tipo": "json",
+  "descricao": "Banco separado das mensagens enviadas pelo formulario Fale Conosco.",
+  "mensagens": [
+    {
+      "id": 1,
+      "nome": "Rajada 55",
+      "email": "loloebiel06@gmail.com",
+      "assunto": "jksojfoisjfopjsofj",
+      "mensagem": "oksoajodjoajdoajoddf",
+      "criado_em": "2026-05-26T00:33:25.047Z"
+    },
+    {
+      "id": 1779755920266,
+      "nome": "GABRIEL OLIANI MARIANO",
+      "email": "loloebiel06@gmail.com",
+      "assunto": "aaaaaaaa",
+      "mensagem": "asasasasasasasasawsasssawasas",
+      "criadoEm": "25/05/2026, 21:38:40"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Acesse sua conta na Vortex Motors." />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>VORTEX MOTORS - Login</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/aurora.css" />
+    <link rel="icon" type="image/png" href="/img/LOGO.png" />
+  </head>
+
+  <body class="au-body">
+    <header class="au-header" role="banner">
+      <a href="/index.html" class="au-logo" aria-label="Vortex Motors - Página inicial">
+        <img src="/img/LOGO.png" alt="Logo Vortex Motors" width="160" height="auto" />
+      </a>
+
+      <nav role="navigation" aria-label="Menu principal">
+        <ul class="au-nav">
+          <li><a href="/index.html" class="au-nav__link">Home</a></li>
+          <li><a href="/pages/about/sobre.html" class="au-nav__link">Sobre</a></li>
+          <li><a href="/pages/veiculos/veiculos.html" class="au-nav__link">Veículos</a></li>
+          <li><a href="/pages/auth/login.html" class="au-nav__link au-nav__link--active" aria-current="page">Login</a></li>
+          <li><a href="/pages/contact/contato.html" class="au-nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="/pages/auth/cadastro.html" class="au-btn au-btn--solid au-btn--sm">Criar Conta</a>
+    </header>
+
+    <main id="main-content">
+      <section
+        class="au-section"
+        style="padding-top: 9rem; padding-bottom: 4rem; border-bottom: 1px solid var(--au-divider);"
+        aria-labelledby="login-title"
+      >
+        <div class="au-container">
+          <div class="au-section-header au-reveal">
+            <span class="au-section-header__eyebrow">Área do Cliente</span>
+            <h1 id="login-title" class="au-h1">Acesse sua conta</h1>
+            <p class="au-body-text">
+              Entre para acompanhar oportunidades, propostas e o seu histórico de atendimento com a Vortex Motors.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="au-section au-section--dark" aria-labelledby="login-form-title">
+        <div class="au-container">
+          <div class="au-grid-2" style="gap: 2rem; align-items: start;">
+            <div>
+              <div class="au-section-header au-reveal au-reveal--left">
+                <span class="au-section-header__eyebrow">Experiência exclusiva</span>
+                <h2 class="au-section-header__title">Tudo centralizado em um único acesso</h2>
+                <p class="au-section-header__body">
+                  Consulte interesse em veículos, negociações em andamento e canais diretos com o time comercial.
+                </p>
+              </div>
+
+              <div class="au-grid-2" style="gap: 1rem;">
+                <article class="au-card au-reveal au-reveal--d1">
+                  <div class="au-card__gold-line"></div>
+                  <div class="au-card__body">
+                    <div class="au-card__number">01.</div>
+                    <div class="au-card__name">Propostas</div>
+                    <div class="au-card__sub">Acompanhe status e retornos do time</div>
+                  </div>
+                </article>
+
+                <article class="au-card au-reveal au-reveal--d2">
+                  <div class="au-card__gold-line"></div>
+                  <div class="au-card__body">
+                    <div class="au-card__number">02.</div>
+                    <div class="au-card__name">Atendimento</div>
+                    <div class="au-card__sub">Histórico consolidado em um só lugar</div>
+                  </div>
+                </article>
+
+                <article class="au-card au-reveal au-reveal--d3">
+                  <div class="au-card__gold-line"></div>
+                  <div class="au-card__body">
+                    <div class="au-card__number">03.</div>
+                    <div class="au-card__name">Lançamentos</div>
+                    <div class="au-card__sub">Receba acesso antecipado a novidades</div>
+                  </div>
+                </article>
+
+                <article class="au-card au-reveal au-reveal--d4">
+                  <div class="au-card__gold-line"></div>
+                  <div class="au-card__body">
+                    <div class="au-card__number">04.</div>
+                    <div class="au-card__name">Suporte Premium</div>
+                    <div class="au-card__sub">Canal direto para dúvidas e pós-venda</div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <article class="au-card au-reveal au-reveal--right" aria-labelledby="login-form-title">
+              <div class="au-card__gold-line" style="width: 100%;"></div>
+              <div class="au-card__body" style="padding: 2rem;">
+                <span class="au-label">Login seguro</span>
+                <h2 id="login-form-title" class="au-h2" style="margin: 0.75rem 0 1rem;">Entrar na plataforma</h2>
+                <p class="au-body-text" style="max-width: none; margin-bottom: 1.5rem;">
+                  Use o e-mail cadastrado para acessar a sua área reservada.
+                </p>
+
+                <form data-validate action="/api/auth/login" method="POST" aria-label="Formulário de login">
+                  <div class="au-form-group" style="margin-bottom: 1rem;">
+                    <label for="email" class="au-form-label">E-mail</label>
+                    <input
+                      class="au-input"
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="seu@email.com"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+
+                  <div class="au-form-group" style="margin-bottom: 1rem;">
+                    <label for="password" class="au-form-label">Senha</label>
+                    <input
+                      class="au-input"
+                      type="password"
+                      id="password"
+                      name="password"
+                      placeholder="••••••••"
+                      autocomplete="current-password"
+                      minlength="6"
+                      required
+                    />
+                  </div>
+
+                  <div class="au-grid-2" style="gap: 1rem; margin: 1.5rem 0;">
+                    <a href="/pages/contact/contato.html" class="au-btn au-btn--outline">Preciso de ajuda</a>
+                    <button type="submit" class="au-btn au-btn--solid">Entrar</button>
+                  </div>
+                </form>
+
+                <hr class="au-divider--fade" style="margin: 1.5rem 0;" />
+
+                <p class="au-caption">
+                  Ainda não possui acesso?
+                  <a href="/pages/auth/cadastro.html" class="au-text--white">Criar conta agora</a>
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="au-footer" role="contentinfo">
+      <div class="au-container">
+        <div class="au-footer__grid">
+          <div>
+            <p class="au-footer__heading">Vortex Motors</p>
+            <a href="/index.html" class="au-footer__link">Home</a>
+            <a href="/pages/about/sobre.html" class="au-footer__link">Sobre</a>
+            <a href="/pages/veiculos/veiculos.html" class="au-footer__link">Veículos</a>
+          </div>
+          <div>
+            <p class="au-footer__heading">Conta</p>
+            <a href="/pages/auth/login.html" class="au-footer__link">Login</a>
+            <a href="/pages/auth/cadastro.html" class="au-footer__link">Cadastro</a>
+            <a href="/pages/contact/contato.html" class="au-footer__link">Suporte</a>
+          </div>
+          <div>
+            <p class="au-footer__heading">Atendimento</p>
+            <a href="/pages/contact/contato.html" class="au-footer__link">Fale Conosco</a>
+            <a href="/pages/about/depoimentos.html" class="au-footer__link">Depoimentos</a>
+          </div>
+          <div>
+            <p class="au-footer__heading">Legal</p>
+            <a href="#" class="au-footer__link">Termos de Uso</a>
+            <a href="#" class="au-footer__link">Privacidade</a>
+          </div>
+        </div>
+        <div class="au-footer__bottom">
+          <span class="au-caption">&copy; 2024 Vortex Motors. Todos os direitos reservados.</span>
+          <span class="au-caption au-text--muted">O futuro em movimento.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/public/js/aurora.js" defer></script>
+    <script src="/public/js/form-validation.js" defer></script>
+    <script src="/public/js/database-client.js" defer></script>
+  </body>
+</html>

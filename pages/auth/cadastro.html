@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Crie sua conta na Vortex Motors." />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>VORTEX MOTORS - Cadastro</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/aurora.css" />
+    <link rel="icon" type="image/png" href="/img/LOGO.png" />
+  </head>
+
+  <body class="au-body">
+    <header class="au-header" role="banner">
+      <a href="/index.html" class="au-logo" aria-label="Vortex Motors - Página inicial">
+        <img src="/img/LOGO.png" alt="Logo Vortex Motors" width="160" height="auto" />
+      </a>
+
+      <nav role="navigation" aria-label="Menu principal">
+        <ul class="au-nav">
+          <li><a href="/index.html" class="au-nav__link">Home</a></li>
+          <li><a href="/pages/about/sobre.html" class="au-nav__link">Sobre</a></li>
+          <li><a href="/pages/veiculos/veiculos.html" class="au-nav__link">Veículos</a></li>
+          <li><a href="/pages/auth/login.html" class="au-nav__link">Login</a></li>
+          <li><a href="/pages/contact/contato.html" class="au-nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="/pages/auth/login.html" class="au-btn au-btn--outline au-btn--sm">Já tenho conta</a>
+    </header>
+
+    <main id="main-content">
+      <section
+        class="au-section"
+        style="padding-top: 9rem; padding-bottom: 4rem; border-bottom: 1px solid var(--au-divider);"
+        aria-labelledby="cadastro-title"
+      >
+        <div class="au-container">
+          <div class="au-section-header au-reveal">
+            <span class="au-section-header__eyebrow">Nova conta</span>
+            <h1 id="cadastro-title" class="au-h1">Cadastre-se na Vortex Motors</h1>
+            <p class="au-body-text">
+              Crie seu acesso para receber propostas personalizadas, acompanhar negociações e falar com nossa equipe.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="au-section au-section--dark" aria-labelledby="cadastro-form-title">
+        <div class="au-container">
+          <div class="au-grid-2" style="gap: 2rem; align-items: start;">
+            <div>
+              <div class="au-section-header au-reveal au-reveal--left">
+                <span class="au-section-header__eyebrow">Benefícios do cadastro</span>
+                <h2 class="au-section-header__title">Entre para a base exclusiva da marca</h2>
+                <p class="au-section-header__body">
+                  Seu perfil permite acelerar consultas, centralizar informações e receber atendimento comercial mais preciso.
+                </p>
+              </div>
+
+              <article class="au-card au-reveal au-reveal--d1" style="margin-bottom: 1rem;">
+                <div class="au-card__gold-line"></div>
+                <div class="au-card__body">
+                  <div class="au-card__number">01.</div>
+                  <div class="au-card__name">Portfólio completo</div>
+                  <div class="au-card__sub">Receba opções alinhadas ao seu perfil e interesse</div>
+                </div>
+              </article>
+
+              <article class="au-card au-reveal au-reveal--d2" style="margin-bottom: 1rem;">
+                <div class="au-card__gold-line"></div>
+                <div class="au-card__body">
+                  <div class="au-card__number">02.</div>
+                  <div class="au-card__name">Contato ágil</div>
+                  <div class="au-card__sub">Facilite simulações, retomadas e atendimento pós-venda</div>
+                </div>
+              </article>
+
+              <article class="au-card au-reveal au-reveal--d3">
+                <div class="au-card__gold-line"></div>
+                <div class="au-card__body">
+                  <div class="au-card__number">03.</div>
+                  <div class="au-card__name">Preferências salvas</div>
+                  <div class="au-card__sub">Mantenha dados prontos para futuras negociações</div>
+                </div>
+              </article>
+            </div>
+
+            <article class="au-card au-reveal au-reveal--right" aria-labelledby="cadastro-form-title">
+              <div class="au-card__gold-line" style="width: 100%;"></div>
+              <div class="au-card__body" style="padding: 2rem;">
+                <span class="au-label">Cadastro seguro</span>
+                <h2 id="cadastro-form-title" class="au-h2" style="margin: 0.75rem 0 1rem;">Criar nova conta</h2>
+                <p class="au-body-text" style="max-width: none; margin-bottom: 1.5rem;">
+                  Preencha os campos abaixo para liberar seu acesso.
+                </p>
+
+                <form data-validate action="/api/auth/register" method="POST" aria-label="Formulário de cadastro">
+                  <div class="au-form-group" style="margin-bottom: 1rem;">
+                    <label for="nome" class="au-form-label">Nome completo</label>
+                    <input
+                      class="au-input"
+                      type="text"
+                      id="nome"
+                      name="nome"
+                      placeholder="Seu nome completo"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+
+                  <div class="au-grid-2" style="gap: 1rem; margin-bottom: 1rem;">
+                    <div class="au-form-group">
+                      <label for="cpf" class="au-form-label">CPF</label>
+                      <input
+                        class="au-input"
+                        type="text"
+                        id="cpf"
+                        name="cpf"
+                        placeholder="000.000.000-00"
+                        pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+                        title="Formato: 000.000.000-00"
+                        required
+                      />
+                    </div>
+
+                    <div class="au-form-group">
+                      <label for="nascimento" class="au-form-label">Nascimento</label>
+                      <input class="au-input" type="date" id="nascimento" name="nascimento" autocomplete="bday" required />
+                    </div>
+                  </div>
+
+                  <div class="au-grid-2" style="gap: 1rem; margin-bottom: 1rem;">
+                    <div class="au-form-group">
+                      <label for="email" class="au-form-label">E-mail</label>
+                      <input
+                        class="au-input"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seu@email.com"
+                        autocomplete="email"
+                        required
+                      />
+                    </div>
+
+                    <div class="au-form-group">
+                      <label for="telefone" class="au-form-label">Telefone</label>
+                      <input
+                        class="au-input"
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(11) 99999-9999"
+                        autocomplete="tel"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="au-grid-2" style="gap: 1rem; margin-bottom: 1rem;">
+                    <div class="au-form-group">
+                      <label for="senha" class="au-form-label">Senha</label>
+                      <input
+                        class="au-input"
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="••••••••"
+                        minlength="6"
+                        autocomplete="new-password"
+                        required
+                      />
+                    </div>
+
+                    <div class="au-form-group">
+                      <label for="confirmar-senha" class="au-form-label">Confirmar senha</label>
+                      <input
+                        class="au-input"
+                        type="password"
+                        id="confirmar-senha"
+                        name="confirmar_senha"
+                        placeholder="••••••••"
+                        minlength="6"
+                        autocomplete="new-password"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <hr class="au-divider" style="margin: 1.5rem 0;" />
+
+                  <div class="au-grid-2" style="gap: 1rem; margin-bottom: 1rem;">
+                    <div class="au-form-group">
+                      <label for="interesse" class="au-form-label">Interesse principal</label>
+                      <select class="au-select" id="interesse" name="interesse">
+                        <option value="">Selecione</option>
+                        <option value="compra">Compra de veículo</option>
+                        <option value="troca">Troca / avaliação</option>
+                        <option value="financiamento">Financiamento</option>
+                        <option value="pos-venda">Pós-venda</option>
+                      </select>
+                    </div>
+
+                    <div class="au-form-group">
+                      <label for="modelo" class="au-form-label">Modelo de interesse</label>
+                      <input class="au-input" type="text" id="modelo" name="modelo" placeholder="Ex: BYD Seal" />
+                    </div>
+                  </div>
+
+                  <div class="au-form-group" style="margin-bottom: 1.5rem;">
+                    <label for="observacoes" class="au-form-label">Observações</label>
+                    <textarea
+                      class="au-textarea"
+                      id="observacoes"
+                      name="observacoes"
+                      rows="4"
+                      placeholder="Descreva o que você procura ou como podemos ajudar."
+                    ></textarea>
+                  </div>
+
+                  <div class="au-grid-2" style="gap: 1rem;">
+                    <a href="/pages/auth/login.html" class="au-btn au-btn--outline">Voltar para login</a>
+                    <button type="submit" class="au-btn au-btn--solid">Criar conta</button>
+                  </div>
+                </form>
+
+                <hr class="au-divider--fade" style="margin: 1.5rem 0;" />
+
+                <p class="au-caption">
+                  Já possui cadastro?
+                  <a href="/pages/auth/login.html" class="au-text--white">Entrar agora</a>
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="au-footer" role="contentinfo">
+      <div class="au-container">
+        <div class="au-footer__grid">
+          <div>
+            <p class="au-footer__heading">Vortex Motors</p>
+            <a href="/index.html" class="au-footer__link">Home</a>
+            <a href="/pages/about/sobre.html" class="au-footer__link">Sobre</a>
+            <a href="/pages/veiculos/veiculos.html" class="au-footer__link">Veículos</a>
+          </div>
+          <div>
+            <p class="au-footer__heading">Conta</p>
+            <a href="/pages/auth/login.html" class="au-footer__link">Login</a>
+            <a href="/pages/auth/cadastro.html" class="au-footer__link">Cadastro</a>
+            <a href="/pages/contact/contato.html" class="au-footer__link">Suporte</a>
+          </div>
+          <div>
+            <p class="au-footer__heading">Atendimento</p>
+            <a href="/pages/contact/contato.html" class="au-footer__link">Fale Conosco</a>
+            <a href="/pages/about/depoimentos.html" class="au-footer__link">Depoimentos</a>
+          </div>
+          <div>
+            <p class="au-footer__heading">Legal</p>
+            <a href="#" class="au-footer__link">Termos de Uso</a>
+            <a href="#" class="au-footer__link">Privacidade</a>
+          </div>
+        </div>
+        <div class="au-footer__bottom">
+          <span class="au-caption">&copy; 2024 Vortex Motors. Todos os direitos reservados.</span>
+          <span class="au-caption au-text--muted">O futuro em movimento.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/public/js/aurora.js" defer></script>
+    <script src="/public/js/form-validation.js" defer></script>
+    <script src="/public/js/database-client.js" defer></script>
+  </body>
+</html>

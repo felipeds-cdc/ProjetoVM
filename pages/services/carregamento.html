@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Encontre pontos de carregamento para seu veículo elétrico com a Vortex Motors." />
+    <title>VORTEX MOTORS - Pontos de Carregamento</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/aurora.css" />
+    <link rel="icon" type="image/png" href="/img/LOGO.png" />
+  </head>
+
+  <body class="au-body">
+    <header class="au-header" role="banner">
+      <a href="/index.html" class="au-logo" aria-label="Vortex Motors - Página inicial">
+        <img src="/img/LOGO.png" alt="Logo Vortex Motors" width="160" height="auto" />
+      </a>
+
+      <nav role="navigation" aria-label="Menu principal">
+        <ul class="au-nav">
+          <li><a href="/index.html" class="au-nav__link">Home</a></li>
+          <li><a href="/pages/about/sobre.html" class="au-nav__link">Sobre</a></li>
+          <li><a href="/pages/veiculos/veiculos.html" class="au-nav__link">Veículos</a></li>
+          <li><a href="/pages/services/servicos.html" class="au-nav__link au-nav__link--active" aria-current="page">Serviços</a></li>
+          <li><a href="/pages/contact/contato.html" class="au-nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="/pages/services/servicos.html" class="au-btn au-btn--outline au-btn--sm">Voltar aos serviços</a>
+    </header>
+
+    <main id="main-content">
+      <section
+        class="au-section"
+        style="padding-top: 9rem; padding-bottom: 4rem; border-bottom: 1px solid var(--au-divider);"
+        aria-labelledby="carregamento-title"
+      >
+        <div class="au-container">
+          <div class="au-section-header au-reveal">
+            <span class="au-section-header__eyebrow">Infraestrutura elétrica</span>
+            <h1 id="carregamento-title" class="au-h1">Pontos de carregamento</h1>
+            <p class="au-body-text">
+              Informe sua região para localizar estações próximas e agilizar o planejamento de recarga do veículo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="au-section au-section--dark" aria-labelledby="form-carregamento-title">
+        <div class="au-container">
+          <div class="au-grid-2" style="gap: 2rem; align-items: start;">
+            <div>
+              <div class="au-section-header au-reveal au-reveal--left">
+                <span class="au-section-header__eyebrow">Consulta guiada</span>
+                <h2 class="au-section-header__title">Receba opções mais aderentes ao seu trajeto</h2>
+                <p class="au-section-header__body">
+                  Com nome, veículo e CEP, conseguimos orientar a busca inicial por pontos de recarga compatíveis.
+                </p>
+              </div>
+
+              <div class="au-grid-2" style="gap: 1rem;">
+                <article class="au-card au-reveal au-reveal--d1">
+                  <div class="au-card__gold-line"></div>
+                  <div class="au-card__body">
+                    <div class="au-card__number">01.</div>
+                    <div class="au-card__name">Cobertura</div>
+                    <div class="au-card__sub">Mapeamento por região e proximidade</div>
+                  </div>
+                </article>
+
+                <article class="au-card au-reveal au-reveal--d2">
+                  <div class="au-card__gold-line"></div>
+                  <div class="au-card__body">
+                    <div class="au-card__number">02.</div>
+                    <div class="au-card__name">Compatibilidade</div>
+                    <div class="au-card__sub">Busca orientada ao perfil do veículo</div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <article class="au-card au-reveal au-reveal--right" aria-labelledby="form-carregamento-title">
+              <div class="au-card__gold-line" style="width: 100%;"></div>
+              <div class="au-card__body" style="padding: 2rem;">
+                <span class="au-label">Solicitação</span>
+                <h2 id="form-carregamento-title" class="au-h2" style="margin: 0.75rem 0 1rem;">Buscar ponto de recarga</h2>
+                <p class="au-body-text" style="max-width: none; margin-bottom: 1.5rem;">
+                  Preencha as informações abaixo para iniciar sua busca.
+                </p>
+
+                <form data-validate aria-label="Formulário de busca de pontos de carregamento">
+                  <div class="au-form-group" style="margin-bottom: 1rem;">
+                    <label for="nome" class="au-form-label">Nome</label>
+                    <input class="au-input" type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+                  </div>
+
+                  <div class="au-form-group" style="margin-bottom: 1rem;">
+                    <label for="placa-carro" class="au-form-label">Placa do carro</label>
+                    <input
+                      class="au-input"
+                      type="text"
+                      id="placa-carro"
+                      name="placa-carro"
+                      placeholder="ABC-1D23"
+                      required
+                    />
+                  </div>
+
+                  <div class="au-form-group" style="margin-bottom: 1.5rem;">
+                    <label for="cep" class="au-form-label">CEP</label>
+                    <input
+                      class="au-input"
+                      type="text"
+                      id="cep"
+                      name="cep"
+                      placeholder="00000-000"
+                      pattern="[0-9]{5}-?[0-9]{3}"
+                      inputmode="numeric"
+                      required
+                    />
+                  </div>
+
+                  <div class="au-grid-2" style="gap: 1rem;">
+                    <a href="/pages/contact/contato.html" class="au-btn au-btn--outline">Falar com especialista</a>
+                    <button type="submit" class="au-btn au-btn--solid">Buscar ponto</button>
+                  </div>
+                </form>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="au-footer" role="contentinfo">
+      <div class="au-container">
+        <div class="au-footer__grid">
+          <div>
+            <p class="au-footer__heading">Vortex Motors</p>
+            <a href="/index.html" class="au-footer__link">Home</a>
+            <a href="/pages/about/sobre.html" class="au-footer__link">Sobre</a>
+            <a href="/pages/veiculos/veiculos.html" class="au-footer__link">Veículos</a>
+          </div>
+          <div>
+            <p class="au-footer__heading">Serviços</p>
+            <a href="/pages/services/servicos.html" class="au-footer__link">Visão geral</a>
+            <a href="/pages/services/troca_pecas.html" class="au-footer__link">Troca de Peças</a>
+            <a href="/pages/services/entrega_rapida.html" class="au-footer__link">Entrega Rápida</a>
+          </div>
+          <div>
+            <p class="au-footer__heading">Atendimento</p>
+            <a href="/pages/contact/contato.html" class="au-footer__link">Fale Conosco</a>
+            <a href="/pages/auth/login.html" class="au-footer__link">Área do Cliente</a>
+          </div>
+          <div>
+            <p class="au-footer__heading">Legal</p>
+            <a href="#" class="au-footer__link">Termos de Uso</a>
+            <a href="#" class="au-footer__link">Privacidade</a>
+          </div>
+        </div>
+        <div class="au-footer__bottom">
+          <span class="au-caption">&copy; 2024 Vortex Motors. Todos os direitos reservados.</span>
+          <span class="au-caption au-text--muted">O futuro em movimento.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/public/js/aurora.js" defer></script>
+    <script src="/public/js/form-validation.js" defer></script>
+  </body>
+</html>

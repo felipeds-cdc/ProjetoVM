@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Solicite troca de peças e manutenção especializada com a Vortex Motors." />
+    <title>VORTEX MOTORS - Troca de Peças</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/aurora.css" />
+    <link rel="icon" type="image/png" href="/img/LOGO.png" />
+  </head>
+
+  <body class="au-body">
+    <header class="au-header" role="banner">
+      <a href="/index.html" class="au-logo" aria-label="Vortex Motors - Página inicial">
+        <img src="/img/LOGO.png" alt="Logo Vortex Motors" width="160" height="auto" />
+      </a>
+
+      <nav role="navigation" aria-label="Menu principal">
+        <ul class="au-nav">
+          <li><a href="/index.html" class="au-nav__link">Home</a></li>
+          <li><a href="/pages/about/sobre.html" class="au-nav__link">Sobre</a></li>
+          <li><a href="/pages/veiculos/veiculos.html" class="au-nav__link">Veículos</a></li>
+          <li><a href="/pages/services/servicos.html" class="au-nav__link au-nav__link--active" aria-current="page">Serviços</a></li>
+          <li><a href="/pages/contact/contato.html" class="au-nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="/pages/services/servicos.html" class="au-btn au-btn--outline au-btn--sm">Voltar aos serviços</a>
+    </header>
+
+    <main id="main-content">
+      <section
+        class="au-section"
+        style="padding-top: 9rem; padding-bottom: 4rem; border-bottom: 1px solid var(--au-divider);"
+        aria-labelledby="troca-pecas-title"
+      >
+        <div class="au-container">
+          <div class="au-section-header au-reveal">
+            <span class="au-section-header__eyebrow">Peças e manutenção</span>
+            <h1 id="troca-pecas-title" class="au-h1">Troca de peças</h1>
+            <p class="au-body-text">
+              Solicite peças, instalação e avaliação técnica para manter o veículo com performance e confiabilidade.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="au-section au-section--dark" aria-labelledby="form-pecas-title">
+        <div class="au-container">
+          <div class="au-grid-2" style="gap: 2rem; align-items: start;">
+            <div>
+              <div class="au-section-header au-reveal au-reveal--left">
+                <span class="au-section-header__eyebrow">Atendimento técnico</span>
+                <h2 class="au-section-header__title">Solicitação orientada para orçamento mais preciso</h2>
+                <p class="au-section-header__body">
+                  Informe a peça, o modelo do veículo e o tipo de serviço desejado para acelerar a análise inicial.
+                </p>
+              </div>
+
+              <article class="au-card au-reveal au-reveal--d1" style="margin-bottom: 1rem;">
+                <div class="au-card__gold-line"></div>
+                <div class="au-card__body">
+                  <div class="au-card__number">01.</div>
+                  <div class="au-card__name">Compra da peça</div>
+                  <div class="au-card__sub">Consulta de disponibilidade e reposição</div>
+                </div>
+              </article>
+
+              <article class="au-card au-reveal au-reveal--d2">
+                <div class="au-card__gold-line"></div>
+                <div class="au-card__body">
+                  <div class="au-card__number">02.</div>
+                  <div class="au-card__name">Compra + instalação</div>
+                  <div class="au-card__sub">Peça com apoio de manutenção especializada</div>
+                </div>
+              </article>
+            </div>
+
+            <article class="au-card au-reveal au-reveal--right" aria-labelledby="form-pecas-title">
+              <div class="au-card__gold-line" style="width: 100%;"></div>
+              <div class="au-card__body" style="padding: 2rem;">
+                <span class="au-label">Solicitação</span>
+                <h2 id="form-pecas-title" class="au-h2" style="margin: 0.75rem 0 1rem;">Solicitar orçamento</h2>
+                <p class="au-body-text" style="max-width: none; margin-bottom: 1.5rem;">
+                  Envie os dados do componente e da necessidade de serviço.
+                </p>
+
+                <form data-validate aria-label="Formulário de troca de peças">
+                  <div class="au-form-group" style="margin-bottom: 1rem;">
+                    <label for="tipo-peca" class="au-form-label">Tipo de peça</label>
+                    <select id="tipo-peca" name="tipo-peca" class="au-select" required>
+                      <option value="">Selecione</option>
+                      <option value="bateria">Bateria</option>
+                      <option value="motor-eletrico">Motor Elétrico</option>
+                      <option value="inversor">Inversor</option>
+                      <option value="carregador">Carregador</option>
+                      <option value="sistema-freio">Sistema de Freio</option>
+                      <option value="suspensao">Suspensão</option>
+                      <option value="outro">Outro</option>
+                    </select>
+                  </div>
+
+                  <div class="au-form-group" style="margin-bottom: 1rem;">
+                    <label for="modelo-veiculo" class="au-form-label">Modelo do veículo</label>
+                    <input
+                      class="au-input"
+                      type="text"
+                      id="modelo-veiculo"
+                      name="modelo-veiculo"
+                      placeholder="Ex: Tesla Model 3, BYD Dolphin"
+                      required
+                    />
+                  </div>
+
+                  <div class="au-form-group" style="margin-bottom: 1rem;">
+                    <label for="tipo-servico" class="au-form-label">Tipo de serviço</label>
+                    <select id="tipo-servico" name="tipo-servico" class="au-select" required>
+                      <option value="">Selecione</option>
+                      <option value="compra">Apenas compra da peça</option>
+                      <option value="compra-instalacao">Compra + instalação</option>
+                    </select>
+                  </div>
+
+                  <div class="au-form-group" style="margin-bottom: 1.5rem;">
+                    <label for="observacoes" class="au-form-label">Observações</label>
+                    <textarea
+                      id="observacoes"
+                      name="observacoes"
+                      class="au-textarea"
+                      placeholder="Descreva mais detalhes se necessário."
+                      rows="4"
+                    ></textarea>
+                  </div>
+
+                  <div class="au-grid-2" style="gap: 1rem;">
+                    <a href="/pages/contact/contato.html" class="au-btn au-btn--outline">Falar com oficina</a>
+                    <button type="submit" class="au-btn au-btn--solid">Solicitar orçamento</button>
+                  </div>
+                </form>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="au-footer" role="contentinfo">
+      <div class="au-container">
+        <div class="au-footer__grid">
+          <div>
+            <p class="au-footer__heading">Vortex Motors</p>
+            <a href="/index.html" class="au-footer__link">Home</a>
+            <a href="/pages/about/sobre.html" class="au-footer__link">Sobre</a>
+            <a href="/pages/veiculos/veiculos.html" class="au-footer__link">Veículos</a>
+          </div>
+          <div>
+            <p class="au-footer__heading">Serviços</p>
+            <a href="/pages/services/servicos.html" class="au-footer__link">Visão geral</a>
+            <a href="/pages/services/carregamento.html" class="au-footer__link">Carregamento</a>
+            <a href="/pages/services/entrega_rapida.html" class="au-footer__link">Entrega Rápida</a>
+          </div>
+          <div>
+            <p class="au-footer__heading">Atendimento</p>
+            <a href="/pages/contact/contato.html" class="au-footer__link">Fale Conosco</a>
+            <a href="/pages/auth/login.html" class="au-footer__link">Área do Cliente</a>
+          </div>
+          <div>
+            <p class="au-footer__heading">Legal</p>
+            <a href="#" class="au-footer__link">Termos de Uso</a>
+            <a href="#" class="au-footer__link">Privacidade</a>
+          </div>
+        </div>
+        <div class="au-footer__bottom">
+          <span class="au-caption">&copy; 2024 Vortex Motors. Todos os direitos reservados.</span>
+          <span class="au-caption au-text--muted">O futuro em movimento.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/public/js/aurora.js" defer></script>
+    <script src="/public/js/form-validation.js" defer></script>
+  </body>
+</html>
